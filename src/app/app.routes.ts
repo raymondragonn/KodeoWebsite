@@ -32,7 +32,7 @@ import { DefaultComponent as DefaultKodeoWebsiteComponent } from './kodeo-websit
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'index-1',
     component: Index1Component,
     children: [
       { path: '', component: DefaultComponent },
@@ -92,7 +92,7 @@ export const routes: Routes = [
     ]
   },
   {
-    path: 'kodeo-website',
+    path: '',
     component: KodeoWebsiteComponent,
     children: [
       { path: '', component: DefaultKodeoWebsiteComponent},
