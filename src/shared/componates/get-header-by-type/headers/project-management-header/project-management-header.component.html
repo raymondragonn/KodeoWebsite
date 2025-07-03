@@ -1,0 +1,43 @@
+<header class="theme-main-menu menu-style-six white-vr sticky-menu menu-overlay" id="page-topbar">
+    <div class="inner-content gap-one">
+        <div class="top-header position-relative">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="logo order-lg-0">
+                    <a routerLink="/" class="d-flex align-items-center">
+                        <img src="assets/images/logo/logo_08.svg" alt="">
+                    </a>
+                </div>
+                <!-- logo -->
+                <div class="right-widget ms-auto ms-lg-0 me-3 me-lg-0 order-lg-3">
+                    <ul class="d-flex align-items-center style-none">
+                        <li>
+                            <a routerLink="/auth" class="login-btn-four fw-500 d-flex align-items-center tran3s"><img
+                                    src="assets/images/icon/icon_26.svg" alt="" class="me-2"> <span>Login</span></a>
+                        </li>
+                        <li class="d-none d-md-inline-block ms-4">
+                            <div class="dropdown" ngbDropdown>
+                                <a class="btn-thirteen dropdown-toggle" ngbDropdownToggle>
+                                    Download
+                                </a>
+                                <ul class="dropdown-menu" ngbDropdownMenu>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">For Windows</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">For iOS</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0)">For Mobile</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="navbar navbar-expand-lg p0 order-lg-2 ms-lg-5">
+                    <button class="navbar-toggler d-block d-lg-none" type="button"
+                        (click)="isSideNavOpen = !isSideNavOpen" [ngClass]="{'collapsed':isSideNavOpen}"
+                        [attr.aria-expanded]="isSideNavOpen">
+                        <span></span>
+                    </button>
+
+                    <app-nav-items [isSideNavOpen]="isSideNavOpen"></app-nav-items>
+                </nav>
+            </div>
+        </div> <!--/.top-header-->
+    </div> <!-- /.inner-content -->
+</header>

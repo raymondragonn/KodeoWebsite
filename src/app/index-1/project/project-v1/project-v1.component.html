@@ -1,0 +1,52 @@
+<!-- 
+		=============================================
+			Inner Banner Two
+		============================================== 
+		-->
+<div class="inner-banner-two bg-one border-30 z-1 pt-100 lg-pt-60 pb-90 lg-pb-50 mt-30 lg-mt-20 position-relative">
+    <div class="container">
+        <div class="title-one text-center">
+            <h2>Portfolio</h2>
+        </div>
+
+        <div class="filter-nav-one mt-50 lg-mt-30">
+            <ul class="style-none d-flex justify-content-center flex-wrap isotop-menu-wrapper">
+                <li [ngClass]="{'is-checked': currantPortFolioType === totalProtFolioType.All}"
+                    (click)="assignPortFolio(totalProtFolioType.All)">All</li>
+                <li [ngClass]="{'is-checked': currantPortFolioType === totalProtFolioType.Markating}"
+                    (click)="assignPortFolio(totalProtFolioType.Markating)">Marketing </li>
+                <li [ngClass]="{'is-checked': currantPortFolioType === totalProtFolioType.App}"
+                    (click)="assignPortFolio(totalProtFolioType.App)">Application</li>
+                <li [ngClass]="{'is-checked': currantPortFolioType === totalProtFolioType.Design}"
+                    (click)="assignPortFolio(totalProtFolioType.Design)">Design</li>
+                <li [ngClass]="{'is-checked': currantPortFolioType === totalProtFolioType.Development}"
+                    (click)="assignPortFolio(totalProtFolioType.Development)">Development</li>
+                <li [ngClass]="{'is-checked': currantPortFolioType === totalProtFolioType.Branding}"
+                    (click)="assignPortFolio(totalProtFolioType.Branding)">Branding</li>
+            </ul>
+        </div>
+    </div>
+    <img src="assets/images/shape/shape_89.svg" alt="" class="shapes shape_01">
+</div>
+<!-- /.inner-banner-two -->
+
+
+<!--
+		=====================================================
+			Project Section Two
+		=====================================================
+		-->
+<div class="project-section-two mt-30 lg-mt-20">
+    <div class="row">
+        <div class="col-12 col-xl-6 mb-30" *ngFor="let project of filteredDatas" [@rowAdded]>
+            <div class="project-block-two position-relative z-1">
+                <img [src]="project.imgSrc" alt="" class="w-100 media-img tran3s">
+                <a [href]="project.link" class="btn-one rounded-circle">
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-fancy-banner></app-fancy-banner>

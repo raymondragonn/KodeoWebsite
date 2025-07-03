@@ -1,0 +1,31 @@
+<div class="project-section-six position-relative mt-225 lg-mt-150 mb-150 lg-mb-60">
+    <div class="container">
+        <div class="title-two mb-55 lg-mb-40">
+            <h2>Our Projects</h2>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="project-slider-one">
+            <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide *ngFor="let slide of slides">
+                  <div class="item">
+                    <div class="project-block-five">
+                      <img [src]="slide.img" alt="" class="media-img w-100">
+                      <div class="position-relative">
+                        <span>{{ slide.category }}</span>
+                        <h4>{{ slide.title }}</h4>
+                        <a [href]="slide.link" class="stretched-link"></a>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </owl-carousel-o>
+        </div>
+    </div>
+
+    <!-- <ul class="slider-arrows slick-arrow-one d-flex justify-content-center style-none">
+        <li class="prev_a slick-arrow" (click)="goToNext()"><i class="  "></i></li>
+        <li class="next_a slick-arrow" (click)="goToPre()"><i class="fa-solid fa-arrow-right-long"></i></li>
+    </ul> -->
+</div>

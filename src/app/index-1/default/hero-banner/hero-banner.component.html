@@ -1,0 +1,44 @@
+<!-- 
+		=============================================
+			Hero Banner
+		============================================== 
+		-->
+<div class="hero-banner-one bg-one border-30 z-1 pt-120 lg-pt-80 pb-100 lg-pb-70 mt-30 lg-mt-20 position-relative">
+    <div class="container position-relative">
+        <div class="row">
+            <div class="col-lg-7 col-md-7">
+                <p class="fs-24 fw-500 text-white mb-10 wow fadeInUp">Apply Now!</p>
+                <h1 class="hero-heading wow fadeInUp">Global Transfers <span
+                        class="d-inline-block position-relative">Quick <img src="assets/images/shape/shape_01.svg"
+                            alt="" class="d-inline-block"></span>Savings</h1>
+                <div class="row">
+                    <div class="col-xxl-8 col-lg-10">
+                        <p class="fs-24 text-white pt-25 pb-30 lg-pb-20 xs-pb-10 wow fadeInUp" data-wow-delay="0.1s">Piku
+                            delivered blazing performance, fast striking word solution</p>
+                    </div>
+                </div>
+                <ul class="style-none d-flex align-items-center flex-wrap">
+                    <li class="mt-10"><a href="javascript:void(0)" class="btn-one me-4">Let’s Started</a></li>
+                    <li class="mt-10"><a href="javascript:void(0)" class="btn-two xl">Apply Now</a></li>
+                </ul>
+                <p class="fs-22 pt-100 md-pt-50 md-pb-20"><span class="fw-500 text-white text-decoration-underline">Join
+                        27,000+</span> companies who’ve reached </p>
+            </div>
+        </div>
+    </div>
+    <div class="client-logo-wrapper">
+        <div class="container">
+            <div class="partner-logo-one">
+                <owl-carousel-o [options]="customOptions">
+                    <ng-container *ngFor="let logo of logos">
+                        <ng-template carouselSlide>
+                            <img [src]="logo" width="50" height="50" alt="Partner Logo" class="ps-4" />
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+    <img src="assets/images/assets/ils_01.png" alt="" class="shapes illustration">
+</div>
+<!-- /.hero-banner-one -->

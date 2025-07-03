@@ -1,0 +1,37 @@
+<div (window:scroll)="windowScroll()">
+    <app-piku-loader *ngIf="loader"></app-piku-loader>
+    <ng-container *ngIf="!loader">
+        @switch (headerType) {
+            @case (allHeaderType.PaymentService) {
+                <app-payment-service-header></app-payment-service-header>
+            }
+            @case (allHeaderType.AiWriter) {
+                <app-ai-writer-header></app-ai-writer-header>
+            }
+            @case (allHeaderType.WebsiteBuilder) {
+                <app-website-builder-header></app-website-builder-header>
+            }
+            @case (allHeaderType.CRM) {
+                <app-crm-header></app-crm-header>
+            }
+            @case (allHeaderType.ProjectManagement) {
+                <app-project-management-header></app-project-management-header>
+            }
+            @case (allHeaderType.MobileAppLanding) {
+                <app-mobile-landing-header></app-mobile-landing-header>
+            }
+            @case (allHeaderType.DigitalAgency) {
+                <app-digital-agency-header></app-digital-agency-header>
+            }
+            @case (allHeaderType.HelpDesk) {
+                <app-help-desk-header></app-help-desk-header>
+            }
+            @case (allHeaderType.WebHosting) {
+                <app-web-hosting-header></app-web-hosting-header>
+            }
+            @case (allHeaderType.CyberSecurity) {
+                <app-cyber-security-header></app-cyber-security-header>
+            }
+        }
+    </ng-container>
+</div>

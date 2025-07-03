@@ -1,0 +1,36 @@
+<app-hero-banner></app-hero-banner>
+<app-block-feature-one></app-block-feature-one>
+<div class="feedback-section-one mb-30 lg-mb-20">
+    <div class="feedback-slider-one">
+        <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide *ngFor="let item of feedbacks">
+                <div class="item">
+                    <div class="feedback-block-one bg-one border-30">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <img [src]="item.logo" alt="" class="w-auto">
+                            <div class="icon rounded-circle bg-white d-flex align-items-center justify-content-center">
+                                <img [src]="item.icon" alt="">
+                            </div>
+                        </div>
+                        <blockquote class="text-white">
+                            I think if you do something and it turns <span style="color: #FD05F3;">out pretty
+                                good</span>, then you should go to do something
+                        </blockquote>
+                        <div class="d-sm-flex align-items-center justify-content-between">
+                            <p class="m0 text-white">
+                                <span class="fw-500 fs-20">{{ item.author }},</span>
+                                {{ item.role }}
+                            </p>
+                            <ul class="style-none d-flex rating text-white">
+                                <li *ngFor="let star of item.rating"><i class="bi bi-star-fill"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+
+    </div>
+</div>
+<app-faq-section-one></app-faq-section-one>
+<app-fancy-banner></app-fancy-banner>

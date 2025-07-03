@@ -1,0 +1,76 @@
+<div class="collapse navbar-collapse" id="navbarNav" [ngClass]="{'show':isSideNavOpen}">
+    <ul class="navbar-nav align-items-lg-center">
+        <!-- Logo -->
+        <li class="d-block d-lg-none">
+            <div class="logo">
+                <a routerLink="/" class="d-block active">
+                    <img src="assets/images/logo/logo_01.svg" alt="" />
+                </a>
+            </div>
+        </li>
+
+        <!-- Menu -->
+        <li *ngFor="let menuItem of menu" class="nav-item dropdown" [ngClass]="{
+        'mega-dropdown': menuItem.menuType === menuType.Large, 
+        'mega-dropdown-sm': menuItem.menuType === menuType.Sm
+      }" ngbDropdown>
+            <a class="nav-link dropdown-toggle" ngbDropdownToggle>
+                {{ menuItem.title }}
+            </a>
+            <ul class="dropdown-menu" ngbDropdownMenu>
+                <ng-container *ngIf="menuItem.items">
+                    <li class="pe-3 ps-3">
+                        <div class="row gx-3">
+                            <div *ngFor="let item of menuItem.items" class="col-lg-3">
+                                <a [routerLink]="item.link" class="home-item w-100">
+                                    <div class="img-item">
+                                        <img [src]="item.img" alt="" class="w-100" />
+                                    </div>
+                                    <span>{{ item.label }}</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ng-container>
+                <ng-container *ngIf="menuItem.categories">
+                    <li class="row gx-1">
+                        <div *ngFor="let category of menuItem.categories" class="col-lg-4">
+                            <div class="menu-column">
+                                <h6 class="mega-menu-title">{{ category.category }}</h6>
+                                <ul class="style-none mega-dropdown-list">
+                                    <li *ngFor="let link of category.links">
+                                        <a [routerLink]="link.link" routerLinkActive="active"
+                                            [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">
+                                            <span>{{ link.label }}</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ng-container>
+                <ng-container *ngIf="menuItem.links">
+                    <li *ngFor="let link of menuItem.links">
+                        <a [routerLink]="link.link" routerLinkActive="active"
+                            [routerLinkActiveOptions]="{ exact: true }" class="dropdown-item">
+                            <span>{{ link.label }}</span>
+                        </a>
+                    </li>
+                </ng-container>
+            </ul>
+        </li>
+        <ng-container *ngIf="extraDetails.length">
+            <li *ngFor="let item of extraDetails" class="d-md-none ps-3 pe-3 mt-20">
+                <a *ngIf="!item.isText" [href]="item.link" [class]="item.class">
+                    <img *ngIf="item.img" [src]="item.img" alt="" class="me-2">
+                     {{ item.label }}
+                </a>
+
+                <p *ngIf="item.isText" class="m0 fs-20 font-manrope text-center fw-500">
+                    {{ item.label }}
+                    <a *ngIf="item.link" [href]="item.link" class="fw-600 text-white">{{ item.link }}</a>
+                </p>
+            </li>
+        </ng-container>
+    </ul>
+</div>

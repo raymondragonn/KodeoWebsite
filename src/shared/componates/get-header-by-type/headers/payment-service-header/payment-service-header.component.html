@@ -1,0 +1,29 @@
+<header class="theme-main-menu menu-style-one">
+    <div class="inner-content bg-wrapper bg-one border-20">
+        <div class="top-header position-relative">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="logo order-lg-0">
+                    <a routerLink="/" class="d-flex align-items-center">
+                        <img src="assets/images/logo/logo_01.svg" alt="">
+                    </a>
+                </div>
+                <!-- logo -->
+                <div class="right-widget ms-auto ms-lg-0 me-3 me-lg-0 order-lg-3">
+                    <ul class="d-flex align-items-center style-none">
+                        <li class="d-none d-md-inline-block ms-3">
+                            <a routerLink="/auth" class="btn-one">Let’s Started</a>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="navbar navbar-expand-lg p0 order-lg-2">
+                    <button class="navbar-toggler d-block d-lg-none" type="button"
+                        (click)="isSideNavOpen = !isSideNavOpen" [ngClass]="{'collapsed':isSideNavOpen}" [attr.aria-expanded]="isSideNavOpen">
+                        <span></span>
+                    </button>
+                    
+                    <app-nav-items [extraDetails]="items" [isSideNavOpen]="isSideNavOpen"></app-nav-items>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,14 @@
+<form class="position-relative {{formClass}}" (ngSubmit)="submit()">
+    <input type="email" placeholder="Your email address" [formControl]="email">
+
+    <div class="help-block with-errors" *ngIf="email.hasError('required') && email.touched">
+        Email is required.
+    </div>
+    <div class="help-block with-errors" *ngIf="email.hasError('email') && email.touched">
+        Please enter a valid email.
+    </div>
+
+    <button class="tran3s" type="button">
+        <img [src]="img" alt="" class="m-auto">
+    </button>
+</form>

@@ -1,0 +1,57 @@
+<div class="blog-section-one mt-200 xl-mt-150 mb-120 lg-mb-80">
+    <div class="container">
+        <div class="title-three text-center mb-80 lg-mb-40">
+            <h2>Our Stories</h2>
+        </div>
+
+        <div class="filter-nav-one">
+            <ul class="style-none d-flex justify-content-center flex-wrap isotop-menu-wrapper">
+                <li *ngFor="let category of categories" [class.is-checked]="activeCategory === category.filter"
+                    (click)="setActiveCategory(category.filter)">
+                    {{ category.label }}
+                </li>
+            </ul>
+        </div>
+
+        <div id="isotop-gallery-wrapper" class="grid-2column pt-60 lg-pt-40">
+            <div class="grid-sizer"></div>
+            <div class="row">
+                <ng-container *ngFor="let blog of blogs">
+                    <div class="col-md-6 col-12" [ngClass]="blog.categories.join(' ')"
+                        *ngIf="filterBlogs(blog.categories)">
+                        <article class="blog-meta-one style-two mb-70 lg-mb-40">
+                            <div class="media">
+                                <img [src]="blog.image" alt="" class="w-100">
+                            </div>
+                            <div class="post-meta position-relative z-1">
+                                <div class="date">{{ blog.date }}</div>
+                                <a [href]="blog.link" class="blog-title d-block">
+                                    <h4>{{ blog.title }}</h4>
+                                </a>
+                                <div class="d-lg-flex justify-content-between align-items-center">
+                                    <ul class="style-none tags d-flex flex-wrap">
+                                        <li *ngFor="let tag of blog.tags"><a href="javascript:void(0)">{{ tag }}</a></li>
+                                    </ul>
+                                    <a [href]="blog.link" class="read-more rounded-circle tran3s md-mt-20">
+                                        <i class="bi bi-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <ul class="pagination-one d-flex justify-content-center align-items-center style-none pt-40">
+            <li class="active"><a href="javascript:void(0)">1</a></li>
+            <li><a href="javascript:void(0)">2</a></li>
+            <li><a href="javascript:void(0)">3</a></li>
+            <li class="ms-2">
+                <a href="javascript:void(0)" class="d-flex align-items-center">Next
+                    <img src="assets/images/icon/icon_15.svg" alt="" class="ms-2">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+<!-- 
+		=============================================
+			Inner Banner Two
+		============================================== 
+		-->
+<div class="inner-banner-two bg-one border-30 z-1 pt-100 lg-pt-60 pb-90 lg-pb-50 mt-30 lg-mt-20 position-relative">
+    <div class="container">
+        <div class="title-one text-center">
+            <h2>Contact Us</h2>
+        </div>
+    </div>
+    <img src="assets/images/shape/shape_89.svg" alt="" class="shapes shape_01">
+</div>
+<!-- /.inner-banner-two -->
+
+
+<!--
+		=====================================================
+			Contact Section Two
+		=====================================================
+		-->
+<div
+    class="contact-section-two bg-one position-relative z-1 pt-110 lg-pt-80 pb-120 lg-pb-80 border-30 mb-30 lg-mb-20 mt-30 lg-mt-20">
+    <div class="contact-banner-one">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-3 col-lg-4">
+                    <div class="block d-flex align-items-center">
+                        <div class="icon d-flex align-items-center justify-content-center rounded-circle"><img
+                                src="assets/images/icon/icon_43.svg" alt=""></div>
+                        <div class="text">
+                            <div class="title">We’r happy to help</div>
+                            <span class="fs-20">ask&#64;homy.com</span>
+                        </div>
+                    </div>
+                    <!-- /.block -->
+                </div>
+                <div class="col-xl-6 col-lg-4">
+                    <div
+                        class="block d-flex align-items-center justify-content-lg-center position-relative z-1 skew-line pt-5 pb-5 md-mt-20 md-mb-20">
+                        <div class="d-flex align-items-center">
+                            <div class="icon d-flex align-items-center justify-content-center rounded-circle"><img
+                                    src="assets/images/icon/icon_44.svg" alt=""></div>
+                            <div class="text">
+                                <div class="title">Hotline number</div>
+                                <span class="fs-20">+757 699 4478, +991 377 9731</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.block -->
+                </div>
+                <div class="col-xl-3 col-lg-4">
+                    <div class="block d-flex align-items-center ps-xl-5">
+                        <div class="icon d-flex align-items-center justify-content-center rounded-circle"><img
+                                src="assets/images/icon/icon_45.svg" alt=""></div>
+                        <div class="text">
+                            <div class="title">Live chat</div>
+                            <span class="fs-20">www.pikuchat.com</span>
+                        </div>
+                    </div>
+                    <!-- /.block -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.contact-banner-one -->
+
+    <div class="container">
+        <div class="form-style-one mt-120 lg-mt-80">
+            <h3 class="font-Montserrat text-center pb-20">Any inquiries? Send us message</h3>
+            <form id="contact-form" [formGroup]="formGroup" (ngSubmit)="submit()">
+                <div class="messages" *ngIf="submitted">
+                    <ngb-alert type="success">Thank you, We will get back to you soon!</ngb-alert>
+                </div>
+                <div class="row controls">
+                    <div class="col-sm-6">
+                        <div class="input-group-meta form-group mb-30">
+                            <label for="">Name*</label>
+                            <input type="text" placeholder="Full Name*" formControlName="name">
+                            <div class="help-block with-errors"
+                                *ngIf="formGroup.get('name')?.hasError('required') && formGroup.get('name')?.touched">
+                                Name is required.</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input-group-meta form-group mb-30">
+                            <label for="">Email*</label>
+                            <input type="email" placeholder="Email Address*" formControlName="email">
+                            <div class="help-block with-errors"
+                                *ngIf="formGroup.get('email')?.hasError('required') && formGroup.get('email')?.touched">
+                                email is required.</div>
+                            <div class="help-block with-errors"
+                                *ngIf="formGroup.get('email')?.hasError('email') && formGroup.get('email')?.touched">
+                                PLease enter vaild email.</div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group-meta form-group mb-35">
+                            <label for="">Subject (optional)</label>
+                            <input type="text" placeholder="Write your subject..." formControlName="sub">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group-meta form-group mb-35">
+                            <textarea placeholder="Write Message here.." formControlName="dec"></textarea>
+                            <div class="help-block with-errors"
+                                *ngIf="formGroup.get('dec')?.hasError('required') && formGroup.get('dec')?.touched">
+                                Please,leave us a message.</div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-20"><button class="btn-five tran3s m-auto">Send Message</button></div>
+                </div>
+            </form>
+        </div> <!-- /.form-style-one -->
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<header class="theme-main-menu menu-style-two sticky-menu menu-overlay" id="page-topbar">
+    <div class="inner-content gap-one">
+        <div class="top-header position-relative">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="logo order-lg-0">
+                    <a routerLink="/" class="d-flex align-items-center">
+                        <img src="assets/images/logo/logo_02.svg" alt="">
+                    </a>
+                </div>
+                <!-- logo -->
+                <div class="order-lg-2 me-auto ms-xxl-5 ps-5 d-none d-md-inline-block">
+                    <p class="m0 fs-20 font-manrope fw-500">Call <a href="javascript:void(0)" class="fw-600 text-white">+757 699-4478</a></p>
+                </div>
+                <div class="right-widget ms-auto ms-lg-0 me-3 me-lg-0 order-lg-3">
+                    <ul class="d-flex align-items-center style-none">
+                        <li>
+                            <a routerLink="/auth" class="login-btn-one fw-bold font-manrope tran3s"><i class="fa-regular fa-lock"></i> <span>Login</span></a>
+                        </li>
+                        <li class="d-none d-md-inline-block ms-4">
+                            <a href="pricing-v1.html" class="btn-three">Free Trials</a>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="navbar navbar-expand-lg p0 order-lg-2 me-lg-auto">
+                    <button class="navbar-toggler d-block d-lg-none" type="button"
+                        (click)="isSideNavOpen = !isSideNavOpen" [ngClass]="{'collapsed':isSideNavOpen}" [attr.aria-expanded]="isSideNavOpen">
+                        <span></span>
+                    </button>
+                    
+                    <app-nav-items [extraDetails]="items" [isSideNavOpen]="isSideNavOpen"></app-nav-items>
+                </nav>
+            </div>
+        </div> <!--/.top-header-->
+    </div> <!-- /.inner-content -->
+</header> 

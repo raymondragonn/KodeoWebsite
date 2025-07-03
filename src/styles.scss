@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+
+.ms-4rem {
+    margin-left: 4rem !important;
+}
+
+.digidropdown {
+    background: #fff7ec;
+}
+
+// 
+.owl-carousel {
+    .owl-item {
+        img {
+            width: unset;
+        }
+    }
+}
+
+
+// owl carosal
+.owl-dot {
+    &.ng-star-inserted {
+        span {
+            border: 2px solid !important;
+            height: 14px !important;
+            width: 14px !important;
+            // background: white !important;
+        }
+    }
+}
+
+.owl-theme {
+    .owl-dots {
+        position: absolute;
+        right: 27%;
+        bottom: 23px;
+        .owl-dot {
+            span {
+                background-color: white;
+            }
+            &.active {
+                span {
+                    background-color: black !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .owl-theme {
+        .owl-dots {
+            position: sticky;
+        }
+    }
+}
+
+@media (max-width: 320.98px) {
+    .search-dropdown .dropdown-menu {
+        transform: translate3d(-160px, 21px, 0px) !important;
+    }
+}
