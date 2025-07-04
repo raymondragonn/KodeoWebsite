@@ -1552,19 +1552,31 @@ p {line-height: 1.777em;}
         position: fixed;
         left: 0;
         right: 0;
-        background: #11061c;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         box-shadow: 0 13px 35px rgb(42 33 114 / 10%);
         border-bottom: 1px solid rgba($color: #fff, $alpha: 0.05);
+        
+        // Mantener transparencia para menu-overlay
+        &.menu-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
         &.menu-style-one {
-            background: $bg-one;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             .bg-wrapper {
                 margin-bottom: 0;
                 margin-top: 0;
             }
         }
         .gap-one {
-            padding-top: 12px;
-            padding-bottom: 12px;
+            padding-top: 6px;
+            padding-bottom: 6px;
         }
         .gap-three {
             padding: 12px 30px;

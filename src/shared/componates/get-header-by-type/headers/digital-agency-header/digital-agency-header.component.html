@@ -2,24 +2,19 @@
     <div class="inner-content gap-one">
         <div class="top-header position-relative">
             <div class="d-flex align-items-center justify-content-between">
-                <!-- Menú a la izquierda -->
-                <div class="left-widget order-lg-0">
-                    <button class="sidenavbtn rounded-circle tran3s" type="button"
-                            (click)="openEnd(content)"><i class="fa-sharp fa-light fa-bars-filter"></i></button>
-                </div>
-                
-                <!-- Logo en el centro -->
-                <div class="logo order-lg-1">
+                <div class="logo order-lg-0">
                     <a routerLink="/" class="d-flex align-items-center">
-                        <img src="assets/images/logo/logo_01.1.svg" alt="">
+                        <img src="assets/images/logo/logo_black_transparent.svg" alt="">
                     </a>
                 </div>
-                
-                <!-- Botón Let's Talk a la derecha -->
-                <div class="right-widget order-lg-2">
+                <!-- logo -->
+                <div class="right-widget ms-auto ms-lg-0 order-lg-3">
                     <ul class="d-flex align-items-center style-none">
                         <li class="d-none d-sm-inline-block">
-                            <a routerLink="/contact-v1" class="btn-five tran3s">Let's Talk</a>
+                            <a routerLink="/contact-v1" class="btn-five tran3s">Trabajemos juntos</a>
+                        </li>
+                        <li class="ms-4"><button class="sidenavbtn rounded-circle tran3s" type="button"
+                                (click)="openEnd(content)"><i class="fa-sharp fa-light fa-bars-filter"></i></button>
                         </li>
                     </ul>
                 </div>
@@ -33,7 +28,7 @@
     <div class="offcanvas-header p-0">
         <div class="logo order-lg-0">
             <a routerLink="/" class="d-flex align-items-center">
-                <img src="assets/images/logo/logo_02.svg" alt="">
+                <img src="assets/images/logo/logo.svg" alt="">
             </a>
         </div>
         <button type="button" class="btn-close" (click)="offcanvas.dismiss('Cross click')"></button>
@@ -83,6 +78,4 @@
             </div>
         </div>
     </div>
-
-    
 </ng-template>

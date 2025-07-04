@@ -1,58 +1,41 @@
-.theme-main-menu {
-  .top-header {
-    .d-flex {
-      position: relative;
-      
-      .left-widget {
-        flex: 0 0 auto;
-        width: auto;
-      }
-      
-      .logo {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        flex: 0 0 auto;
-        width: auto;
-      }
-      
-      .right-widget {
-        flex: 0 0 auto;
-        width: auto;
-        margin-left: auto;
-      }
+.logo {
+  img {
+    width: 180px; // Aumentar el ancho del logo
+    height: auto; // Mantener la proporción
+    max-width: 200px; // Límite máximo de ancho
+  }
+}
+
+// Para pantallas más pequeñas, ajustar el tamaño
+@media (max-width: 768px) {
+  .logo {
+    img {
+      width: 140px; // Tamaño más pequeño en móviles
+      max-width: 160px;
     }
   }
 }
 
-.theme-main-menu.fixed {
-  background: rgba(0, 0, 0, 0.6) !important; /* Fondo negro translúcido */
-  backdrop-filter: blur(12px); /* Efecto borroso */
-  -webkit-backdrop-filter: blur(12px); /* Soporte Safari */
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-// Responsive adjustments
-@media (max-width: 991px) {
-  .theme-main-menu {
-    .top-header {
-      .d-flex {
-        .logo {
-          position: relative;
-          left: auto;
-          transform: none;
-          order: 0;
-        }
-        
-        .left-widget {
-          order: 1;
-        }
-        
-        .right-widget {
-          order: 2;
-        }
-      }
+// Para pantallas muy pequeñas
+@media (max-width: 480px) {
+  .logo {
+    img {
+      width: 120px; // Tamaño aún más pequeño en móviles pequeños
+      max-width: 140px;
     }
   }
+}
+
+// Estilos específicos para navbar sticky transparente
+:host ::ng-deep .theme-main-menu.menu-style-four.sticky-menu.menu-overlay.fixed {
+  background: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  transition: all 0.4s ease-in-out;
+}
+
+// Asegurar que el navbar mantenga la transparencia
+:host ::ng-deep .theme-main-menu.menu-style-four.sticky-menu.menu-overlay {
+  background: transparent;
+  transition: all 0.4s ease-in-out;
 }
