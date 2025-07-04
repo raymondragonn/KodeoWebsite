@@ -7321,7 +7321,7 @@ p {
 }
 
 .feedback-section-nine {
-  background: #481938;
+  background-color: #000000;
 }
 .feedback-section-nine .wrapper {
   width: 130vw;
@@ -7352,7 +7352,7 @@ p {
   height: 40px;
 }
 .feedback-section-nine .slick-center .feedback-block {
-  background: rgba(255, 255, 255, 0.08);
+  background: black;
 }
 .feedback-section-nine .slider-arrows li {
   width: 58px;
