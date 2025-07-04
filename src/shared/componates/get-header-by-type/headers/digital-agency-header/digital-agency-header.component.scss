@@ -1,0 +1,50 @@
+.theme-main-menu {
+  .top-header {
+    .d-flex {
+      position: relative;
+      
+      .left-widget {
+        flex: 0 0 auto;
+        width: auto;
+      }
+      
+      .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        flex: 0 0 auto;
+        width: auto;
+      }
+      
+      .right-widget {
+        flex: 0 0 auto;
+        width: auto;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 991px) {
+  .theme-main-menu {
+    .top-header {
+      .d-flex {
+        .logo {
+          position: relative;
+          left: auto;
+          transform: none;
+          order: 0;
+        }
+        
+        .left-widget {
+          order: 1;
+        }
+        
+        .right-widget {
+          order: 2;
+        }
+      }
+    }
+  }
+}

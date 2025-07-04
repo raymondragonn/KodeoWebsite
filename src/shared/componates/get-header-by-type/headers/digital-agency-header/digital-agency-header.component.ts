@@ -84,7 +84,7 @@ export class DigitalAgencyHeaderComponent {
   }
 
   openEnd(content: TemplateRef<any>) {
-    this.offcanvasService.open(content, { position: 'end',panelClass:'sidebar-nav' });
+    this.offcanvasService.open(content, { position: 'start',panelClass:'sidebar-nav' });
   }
 
   toggleCollapse(menu: DigitalAgencyMenuItems): void {
