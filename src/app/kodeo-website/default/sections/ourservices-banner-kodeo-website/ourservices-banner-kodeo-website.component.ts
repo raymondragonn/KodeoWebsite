@@ -26,11 +26,11 @@ export class OurservicesBannerKodeoWebsiteComponent {
     margin: 10,
     nav: false,
     dots: false,
-    items: 6,
+    items: 1,
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
-    slideBy: 6,
+    slideBy: 1,
     responsive: {
       0: {
         items: 1,
@@ -39,7 +39,7 @@ export class OurservicesBannerKodeoWebsiteComponent {
         items: 1,
       },
       1000: {
-        items: 6,
+        items: 1,
       },
     },
   };

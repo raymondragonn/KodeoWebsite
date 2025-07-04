@@ -26,16 +26,17 @@
   }
 }
 
-// Estilos específicos para navbar sticky transparente
-:host ::ng-deep .theme-main-menu.menu-style-four.sticky-menu.menu-overlay.fixed {
-  background: rgba(0, 0, 0, 0.6) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  transition: all 0.4s ease-in-out;
+.modify-header{
+  padding: 12px;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); 
+  transition: none !important;
+  height: auto;
 }
 
-// Asegurar que el navbar mantenga la transparencia
-:host ::ng-deep .theme-main-menu.menu-style-four.sticky-menu.menu-overlay {
-  background: transparent;
-  transition: all 0.4s ease-in-out;
-}

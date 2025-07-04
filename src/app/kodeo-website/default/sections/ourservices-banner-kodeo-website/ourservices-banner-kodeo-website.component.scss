@@ -1,0 +1,23 @@
+.service-card {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #fff !important;
+  color: #111 !important;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.06);
+}
+
+.service-card * {
+  color: #111 !important;
+}
+
+.service-card .main-count {
+  color: #111 !important;
+}
+
+.service-card p {
+  color: #111 !important;
+}
