@@ -1528,7 +1528,7 @@ p {line-height: 1.777em;}
     // box-shadow: 0 13px 35px -12px rgb(35 35 35 / 10%);
     @include transition(0.4s);
     .gap-one {
-        padding: 33px 40px;
+        padding: 2px 40px 33px 40px;
     }
     .gap-two {
         padding: 24px 40px;
@@ -1575,8 +1575,8 @@ p {line-height: 1.777em;}
             }
         }
         .gap-one {
-            padding-top: 6px;
-            padding-bottom: 6px;
+            padding-top: 2px;
+            padding-bottom: 2px;
         }
         .gap-three {
             padding: 12px 30px;

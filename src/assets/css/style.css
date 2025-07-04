@@ -2689,7 +2689,7 @@ p {
   transition: all 0.4s ease-in-out 0s;
 }
 .theme-main-menu .gap-one {
-  padding: 33px 40px;
+  padding: 2px 40px 33px 40px;
 }
 .theme-main-menu .gap-two {
   padding: 24px 40px;
@@ -2732,8 +2732,8 @@ p {
   margin-top: 0;
 }
 .theme-main-menu.fixed .gap-one {
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 .theme-main-menu.fixed .gap-three {
   padding: 12px 30px;
