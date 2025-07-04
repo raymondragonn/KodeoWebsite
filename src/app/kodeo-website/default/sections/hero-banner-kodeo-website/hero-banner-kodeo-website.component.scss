@@ -1,0 +1,19 @@
+.hero-logo {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-logo {
+    max-width: 250px;
+  }
+}

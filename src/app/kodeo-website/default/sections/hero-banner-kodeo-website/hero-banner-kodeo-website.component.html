@@ -1,14 +1,33 @@
-<div class="hero-banner-three z-1 position-relative pt-200 lg-pt-150 pb-75 ">
+<div class="hero-banner-three z-1 position-relative pt-200 lg-pt-150 pb-75">
     <div class="container position-relative">
-        <div class="row mb-100">
-            <div class="col-xl-10 col-lg-10 m-auto text-center">
-                <h1 class="hero-heading wow fadeInUp">Design website without Coding Experience</h1>
-                <p class="fs-28 text-white pt-40 lg-pt-30 pb-35 lg-pb-20 wow fadeInUp" data-wow-delay="0.1s">What kind of website would you like to create? Let’s Get started</p>
-                <form class="m-auto position-relative">
-                    <input #buildInput type="text" placeholder="Ex: Business, Marketing">
-                    <button type="button" (click)="onBuildNowClick(buildInput.value)" class="tran3s">Build Now</button>
-                </form>
-            </div>
+      <div class="row mb-100">
+        <div class="col-xl-10 col-lg-10 m-auto text-center">
+          <div class="hero-heading wow fadeInUp">
+            <img src="assets/images/logo/logo_black_transparent.svg" alt="Kodeo Logo" class="hero-logo">
+          </div>
+          <p 
+            class="fs-28 text-white pt-0 lg-pt-30 pb-35 lg-pb-20 wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            ¿Qué tipo de sitio web necesitas? Comencemos hoy mismo.
+          </p>
+          <form class="m-auto position-relative">
+            <input
+              #buildInput
+              type="text"
+              placeholder="Ej: Tienda en línea, Portafolio creativo, Blog personal"
+              aria-label="Tipo de sitio web que deseas crear"
+            />
+            <button 
+              type="button" 
+              (click)="onBuildNowClick(buildInput.value)" 
+              class="tran3s"
+            >
+              ¡Hagámoslo realidad!
+            </button>
+          </form>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+  
