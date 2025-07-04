@@ -3,6 +3,7 @@ import { NgbAccordionModule, NgbCollapseModule, NgbDropdownMenu, NgbDropdownModu
 import { MENUITEMS } from '../../nav-items/menu-data';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ScrollServiceService } from '../../../../../app/services/scroll-service.service';
 
 interface DigitalAgencyMenuItems {
   label: string
@@ -76,15 +77,27 @@ export class DigitalAgencyHeaderComponent {
     },
   ]
 
-  constructor(private renderer: Renderer2, private el: ElementRef) { }
+  constructor(private renderer: Renderer2,private scrollService: ScrollServiceService, private el: ElementRef) { }
 
   ngOnInit() { }
   ngOnDestroy() {
     this.offcanvasService.dismiss()
   }
 
+  scrollToContact() {
+    this.scrollService.scrollToElement('contactSection');
+  }
+
   openEnd(content: TemplateRef<any>) {
     this.offcanvasService.open(content, { position: 'end',panelClass:'sidebar-nav' });
+  }
+
+  scrollToBottom() {
+    const offset = 2500; 
+    window.scrollTo({
+      top: document.body.scrollHeight - offset,
+      behavior: 'smooth'
+    });
   }
 
   toggleCollapse(menu: DigitalAgencyMenuItems): void {

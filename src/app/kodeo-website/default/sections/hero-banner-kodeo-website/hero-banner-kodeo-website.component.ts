@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollServiceService } from '../../../../services/scroll-service.service';
 
 @Component({
   selector: 'app-hero-banner-kodeo-website',
@@ -8,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './hero-banner-kodeo-website.component.scss'
 })
 export class HeroBannerKodeoWebsiteComponent {
+  
+  constructor(private scrollService: ScrollServiceService ){}
 
+  onBuildNowClick(text: string) {
+    this.scrollService.scrollToElement('contactSection');
+    this.scrollService.fillContactForm(text);
+  }  
 }
