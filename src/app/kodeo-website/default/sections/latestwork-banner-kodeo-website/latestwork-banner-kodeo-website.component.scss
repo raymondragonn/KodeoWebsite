@@ -1,0 +1,13 @@
+.card-modify {
+    border: none;
+    .inside-card {
+        border: none;
+        background: none;
+        .title-project {
+            margin-top: 0;
+        }
+        .description-project {
+            margin-bottom: 0.5rem;
+        }
+    }
+}
