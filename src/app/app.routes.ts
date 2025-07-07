@@ -89,6 +89,8 @@ export const routes: Routes = [
       { path: 'blog-details', component: BlogDetailsComponent},
       { path: 'project-v3', component: ProjectV3Component},
       { path: 'project-details', component: ProjectDetailsComponent },
+      { path: 'project-details/:id', component: ProjectDetailsComponent },
+
     ]
   },
   {
