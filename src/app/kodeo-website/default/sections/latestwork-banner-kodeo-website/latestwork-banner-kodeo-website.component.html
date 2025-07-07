@@ -1,10 +1,11 @@
 <div class="project-section-one mt-130 lg-mt-80" style="background-image: url(assets/images/assets/bg_01.png);">
     <div class="container xl">
         <div class="position-relative">
-            <div class="title-three">
+            <div class="title-three pb-10">
                 <h1 class="hero-heading text-uppercase wow fadeInUp">Conoce nuestro <span style="font-weight: 800;">portafolio</span>.</h1>
             </div>
-            <div class="project-block-one card-modify overflow-hidden mt-60 lg-mt-20">
+            
+            <div class="project-block-one overflow-hidden mt-60 lg-mt-20" *ngFor="let item of portfolioItems">
                 <div class="row gx-0">
                     <div class="col-lg-6 d-flex">
                         <div class="text-meta w-100 inside-card">
@@ -25,6 +26,19 @@
                         <div class="image-meta w-100">
                             <img src="assets/images/media/img_16.png" alt="" class="ms-auto wow fadeInRight">
                         </div>
+                    <div class="text-meta w-100">
+                        <div class="num font-Montserrat">{{ item.num }}</div>
+                        <a [routerLink]="item.link" class="title text-uppercase fw-500">{{ item.title }}</a>
+                        <p class="fs-28 text-white">{{ item.description }}</p>
+                        <a [routerLink]="item.link" class="arow-icon">
+                        <i class="fa-light fa-arrow-up-right"></i>
+                        </a>
+                        <ul class="style-none d-flex flex-wrap">
+                        <li *ngFor="let tag of item.tags">
+                            <a [routerLink]="item.link">{{ tag }}</a>
+                        </li>
+                        </ul>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -79,9 +93,12 @@
                             style="background: none;">
                             <img src="assets/images/media/img_18.png" alt="" class="wow fadeInUp">
                         </div>
+                    <div class="image-meta w-100" [ngStyle]="{'background': item.bgColor}">
+                        <img [src]="item.imageUrl" alt="" class="ms-auto wow fadeInRight">
+                    </div>
                     </div>
                 </div>
-            </div>
+                </div>
             <!-- /.project-block-one -->
         </div>
     </div>
