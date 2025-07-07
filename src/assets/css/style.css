@@ -2689,7 +2689,7 @@ p {
   transition: all 0.4s ease-in-out 0s;
 }
 .theme-main-menu .gap-one {
-  padding: 33px 40px;
+  padding: 2px 40px 33px 40px;
 }
 .theme-main-menu .gap-two {
   padding: 24px 40px;
@@ -2711,20 +2711,29 @@ p {
   position: fixed;
   left: 0;
   right: 0;
-  background: #11061c;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 13px 35px rgba(42, 33, 114, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
+.theme-main-menu.fixed.menu-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
 .theme-main-menu.fixed.menu-style-one {
-  background: #000000;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .theme-main-menu.fixed.menu-style-one .bg-wrapper {
   margin-bottom: 0;
   margin-top: 0;
 }
 .theme-main-menu.fixed .gap-one {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 .theme-main-menu.fixed .gap-three {
   padding: 12px 30px;
@@ -7312,7 +7321,7 @@ p {
 }
 
 .feedback-section-nine {
-  background: #481938;
+  background-color: #000000;
 }
 .feedback-section-nine .wrapper {
   width: 130vw;
@@ -7343,7 +7352,7 @@ p {
   height: 40px;
 }
 .feedback-section-nine .slick-center .feedback-block {
-  background: rgba(255, 255, 255, 0.08);
+  background: black;
 }
 .feedback-section-nine .slider-arrows li {
   width: 58px;

@@ -1,0 +1,40 @@
+.hero-logo {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-heading {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-banner-three p {
+  position: relative;
+  z-index: 2;
+  margin-top: -60px; /* Ajusta este valor según necesites */
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    max-width: 300px;
+  }
+  
+  .hero-banner-three p {
+    margin-top: -30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-logo {
+    max-width: 250px;
+  }
+  
+  .hero-banner-three p {
+    margin-top: -20px;
+  }
+}

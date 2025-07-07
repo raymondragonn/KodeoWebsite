@@ -1,0 +1,42 @@
+.logo {
+  img {
+    width: 180px; // Aumentar el ancho del logo
+    height: auto; // Mantener la proporción
+    max-width: 200px; // Límite máximo de ancho
+  }
+}
+
+// Para pantallas más pequeñas, ajustar el tamaño
+@media (max-width: 768px) {
+  .logo {
+    img {
+      width: 140px; // Tamaño más pequeño en móviles
+      max-width: 160px;
+    }
+  }
+}
+
+// Para pantallas muy pequeñas
+@media (max-width: 480px) {
+  .logo {
+    img {
+      width: 120px; // Tamaño aún más pequeño en móviles pequeños
+      max-width: 140px;
+    }
+  }
+}
+
+.modify-header{
+  padding: 12px;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); 
+  transition: none !important;
+  height: auto;
+}
+

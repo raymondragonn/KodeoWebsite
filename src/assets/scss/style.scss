@@ -611,6 +611,7 @@ p {line-height: 1.777em;}
 .color-dark {color: #000;}
 .fw-600 {font-weight: 600;}
 .fw-500 {font-weight: 500;}
+.fs-30 {font-size: 30px;}
 .fs-28 {font-size: 28px;}
 .fs-24 {font-size: 24px;}
 .fs-22 {font-size: 22px;}
@@ -1528,7 +1529,7 @@ p {line-height: 1.777em;}
     // box-shadow: 0 13px 35px -12px rgb(35 35 35 / 10%);
     @include transition(0.4s);
     .gap-one {
-        padding: 33px 40px;
+        padding: 2px 40px 33px 40px;
     }
     .gap-two {
         padding: 24px 40px;
@@ -1552,19 +1553,31 @@ p {line-height: 1.777em;}
         position: fixed;
         left: 0;
         right: 0;
-        background: #11061c;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         box-shadow: 0 13px 35px rgb(42 33 114 / 10%);
         border-bottom: 1px solid rgba($color: #fff, $alpha: 0.05);
+        
+        // Mantener transparencia para menu-overlay
+        &.menu-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
         &.menu-style-one {
-            background: $bg-one;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             .bg-wrapper {
                 margin-bottom: 0;
                 margin-top: 0;
             }
         }
         .gap-one {
-            padding-top: 12px;
-            padding-bottom: 12px;
+            padding-top: 2px;
+            padding-bottom: 2px;
         }
         .gap-three {
             padding: 12px 30px;
@@ -6454,7 +6467,7 @@ p {line-height: 1.777em;}
 }
 // Feedback Section Nine
 .feedback-section-nine { 
-    background: #481938;
+    background: #000000;
     .wrapper {
         width: 130vw;
         position: relative;
