@@ -7,24 +7,43 @@
   background: #161616;
   color: #fff;
   font-family: 'Gordita', Arial, sans-serif;
-  .row {
-    margin-bottom: 0;
+  padding: 50px 100px;
+  .footer-row {
+    min-height: 220px;
   }
-  .border-top {
-    border-top: 1.5px solid #333 !important;
-  }
-  a, span {
-    color: #fff;
-    text-decoration: none;
+  .footer-title {
+    margin-bottom: 24px;
+    font-size: 2rem;
     font-weight: 400;
-    transition: color 0.2s;
   }
-  a:hover, span:hover {
+  .footer-social-links {
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+  .footer-social-link {
+    font-weight: 700;
+    color: inherit;
+    text-decoration: none;
+  }
+  .footer-social-link:hover {
     color: #b3b3b3;
+    text-shadow: none;
   }
-  .copyright-text {
-    font-size: 1.2rem;
-    color: #fff;
-    margin: 0;
+  .footer-contact-title {
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+  }
+  .footer-contact-email {
+    font-size: 3.2rem;
+    font-weight: bold;
+  }
+  .footer-menu {
+    font-size: 1.5rem;
+  }
+  .footer-copyright-row {
+    border-color: #333 !important;
+  }
+  .footer-copyright {
+    font-size: 1.3rem;
   }
 }

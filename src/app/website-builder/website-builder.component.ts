@@ -14,4 +14,10 @@ import { LayoutType } from '../../shared/types/layout-type';
 export class WebsiteBuilderComponent {
   allLayout=LayoutType;
 
+  scrollToSection(sectionId: string) {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

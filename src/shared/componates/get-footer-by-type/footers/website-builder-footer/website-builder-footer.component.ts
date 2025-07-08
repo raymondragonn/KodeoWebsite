@@ -18,4 +18,11 @@ export class WebsiteBuilderFooterComponent {
     const currentDate = new Date(this.date);
     this.year = currentDate.getFullYear();
   }
+
+  scrollToSection(sectionId: string) {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
 }

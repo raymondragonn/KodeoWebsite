@@ -1,26 +1,25 @@
-<div class="footer-custom" style="background: #161616; color: #fff; padding: 50px 100px;">
+<div class="footer-custom">
   <div class="container">
-    <div class="row align-items-start" style="min-height: 220px;">
+    <div class="row align-items-start footer-row">
       <div class="col-lg-6 col-md-6 mb-4 mb-lg-0">
-        <div style="margin-bottom: 24px; font-size: 2rem; font-weight: 400;">Redes Sociales</div>
-        <div style="font-size: 2.8rem; font-weight: bold; line-height: 1.1;">
-          Instagram<br>
-          Facebook<br>
-          LinkedIn<br>
+        <div class="footer-title">Redes Sociales</div>
+        <div class="footer-social-links">
+          <a href="https://wa.me/" target="_blank" class="footer-social-link">WhatsApp</a><br>
+          <a href="https://www.instagram.com/bykodeo/" target="_blank" class="footer-social-link">Instagram</a><br>
+          <a href="https://facebook.com/" target="_blank" class="footer-social-link">Facebook</a><br>
         </div>
       </div>
       <div class="col-lg-6 col-md-6 text-lg-end text-md-end text-start">
-        <div style="font-size: 1.7rem; margin-bottom: 0.5rem;">No seas un extraño. Escríbenos.</div>
-        <div style="font-size: 3.2rem; font-weight: bold;">hello&#64;bykodeo.com</div>
-        <div class="col-lg-12 col-md-12 d-flex flex-wrap justify-content-lg-end justify-content-md-end justify-content-center gap-4" style="font-size: 1.5rem;">
-            <span>SERVICIOS</span>
-            <span>PORTAFOLIO</span>
-            <span>RESEÑAS</span>
-            <span>CONTACTO</span>
+        <div class="footer-contact-title">No seas un extraño. Escríbenos.</div>
+        <div class="footer-contact-email">hello&#64;bykodeo.com</div>
+        <div class="col-lg-12 col-md-12 d-flex flex-wrap justify-content-lg-end justify-content-md-end justify-content-center gap-4 footer-menu">
+            <span (click)="scrollToSection('servicesSection')" style="cursor:pointer;">SERVICIOS</span>
+            <span (click)="scrollToSection('projectsSection')" style="cursor:pointer;">PORTAFOLIO</span>
+            <span (click)="scrollToSection('testimonialsSection')" style="cursor:pointer;">RESEÑAS</span>
+            <span (click)="scrollToSection('contactSection')" style="cursor:pointer;">CONTACTO</span>
         </div>
-        <div class="row mt-5 pt-4 border-top" style="border-color: #333 !important;">
-          <div class="col-lg-12 col-md-12 text-lg-end text-md-end text-center mt-3 mt-md-0" style="font-size: 1.3rem;">
-            <span class="me-4">POLÍTICAS DE PRIVACIDAD</span>
+        <div class="row mt-5 pt-4 border-top footer-copyright-row">
+          <div class="col-lg-12 col-md-12 text-lg-end text-md-end text-center mt-3 mt-md-0 footer-copyright">
             <span>KODEO 2025 ©</span>
           </div>
         </div>
