@@ -1,0 +1,30 @@
+.footer-four .logo img {
+  width: 160px; /* Puedes ajustar este valor según lo grande que quieras el logo */
+  height: auto;
+}
+
+.footer-custom {
+  background: #161616;
+  color: #fff;
+  font-family: 'Gordita', Arial, sans-serif;
+  .row {
+    margin-bottom: 0;
+  }
+  .border-top {
+    border-top: 1.5px solid #333 !important;
+  }
+  a, span {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+  a:hover, span:hover {
+    color: #b3b3b3;
+  }
+  .copyright-text {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0;
+  }
+}

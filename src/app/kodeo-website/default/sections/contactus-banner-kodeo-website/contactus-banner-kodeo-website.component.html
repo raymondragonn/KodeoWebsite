@@ -1,46 +1,43 @@
-<div id="contactSection" class="contact-section-one mt-180 lg-mt-80" style="background-image: url(assets/images/assets/bg_01.png);">
-    <div class="container xl">
-        <div class="wrapper">
-            <div class="title-three text-center mb-60">
-                <h2>CONTACT US</h2>
+<div id="contactSection" class="contact-section-one mt-180 lg-mt-80" style="background-color: #161616;">
+<div class="container xl">
+            <div class="title-three">
+                <h1 class="hero-heading text-uppercase text-center mb-60">Escríbenos.</h1>
             </div>
-
-            <div class="form-style-one">
-                <form [formGroup]="form" id="contact-form">
-                    <div class="messages"></div>
-                    <div class="row controls">
-                        <div class="col-sm-6">
+    <div class="form-style-one narrow-form">
+            <form [formGroup]="form" id="contact-form">
+                <div class="messages"></div>
+                <div class="row controls">
+                    <div class="col-sm-6">
                         <div class="input-group-meta form-group mb-30">
-                            <label for="">Name*</label>
-                            <input type="text" placeholder="Full Name*" formControlName="name" required>
+                            <label class="label-modify" for="">¿Cómo te llamas?</label>
+                            <input type="text" placeholder="" formControlName="name" required>
                             <div class="help-block with-errors"></div>
-                        </div>
-                        </div>
-                        <div class="col-sm-6">
-                        <div class="input-group-meta form-group mb-30">
-                            <label for="">Email*</label>
-                            <input type="email" placeholder="Email Address*" formControlName="email" required>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        </div>
-                        <div class="col-12">
-                        <div class="input-group-meta form-group mb-35">
-                            <label for="">Subject (optional)</label>
-                            <input type="text" placeholder="Write your subject..." formControlName="subject">
-                        </div>
-                        </div>
-                        <div class="col-12">
-                        <div class="input-group-meta form-group mb-35">
-                            <textarea placeholder="Write Message here.." formControlName="message" required></textarea>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        </div>
-                        <div class="col-12 mt-20">
-                        <button class="btn-five tran3s m-auto" type="submit">Send Message</button>
                         </div>
                     </div>
-                </form>
-            </div> <!-- /.form-style-one -->
-        </div>
+                    <div class="col-sm-6">
+                        <div class="input-group-meta form-group mb-30">
+                            <label class="label-modify" for="">¿Cuál es tu correo electrónico?</label>
+                            <input type="email" placeholder="" formControlName="email" required>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group-meta form-group mb-35">
+                            <label class="label-modify" for="">¿Qué página o app web necesitas?</label>
+                            <input type="text" placeholder="" formControlName="subject">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group-meta form-group mb-35">
+                            <textarea placeholder="Explícanos tus necesidades..." formControlName="message" required></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-20">
+                        <button class="btn-five tran3s m-auto" type="submit">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div> <!-- /.form-style-one -->
     </div>
 </div>

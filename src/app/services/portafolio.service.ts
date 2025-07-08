@@ -40,7 +40,7 @@ export class   PortafolioService {
       cliente: 'Aixa',
       categoria: 'Web',
       challenge:  'El desafio fue crear una plataforma intuitiva y atractiva que reflejara la esencia de la marca Aixa',
-      sitio: 'https://aixaver.com/index-2',
+      sitio: 'aixaver.com',
       link: '/digital-agency/project-details/1',
       tags: ['Web', 'UI/UX', 'BRANDING'],
       imageUrl: 'assets/images/media/img_16.png',
