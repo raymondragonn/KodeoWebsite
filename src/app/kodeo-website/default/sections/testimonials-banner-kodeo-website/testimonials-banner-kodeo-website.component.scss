@@ -1,3 +1,26 @@
 .feedback-section-nine {
     background-color: black;
 }
+.feedback-block blockquote {
+  font-size: 1.4rem; // Puedes ajustar este valor según lo pequeño que lo quieras
+}
+.feedback-block .logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+.feedback-block .name {
+  font-size: 1rem;
+}
+@media (max-width: 600px) {
+  .feedback-block blockquote {
+    font-size: 1rem;
+  }
+  .feedback-block .logo {
+    width: 40px;
+    height: 40px;
+  }
+  .feedback-block .name {
+    font-size: 0.85rem;
+  }
+}

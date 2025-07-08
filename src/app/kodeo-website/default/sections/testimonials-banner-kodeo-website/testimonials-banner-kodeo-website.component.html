@@ -1,4 +1,4 @@
-<div class="feedback-section-nine feedback-change position-relative z-1 pt-120 xl-pt-100 lg-pt-70 pb-130 lg-pb-80 mt-110 lg-mt-80" style="background-color: #161616;">
+<div class="feedback-section-nine feedback-change position-relative z-1 pt-120 xl-pt-100 lg-pt-80 pb-130 lg-pb-80 mt-0 lg-mt-0" style="background-color: #161616;">
     <div class="container">
         <div class="title-three pb-50">
             <h1 class="hero-heading text-center wow fadeInUp">¿Qué dicen nuestros clientes?</h1>
@@ -7,53 +7,14 @@
     <div class="wrapper">
         <div class="feedback-slider-six">
             <owl-carousel-o [options]="customOptions">
-                <ng-template carouselSlide>
+                <ng-template carouselSlide *ngFor="let testimonial of testimonials">
                     <div class="item">
                         <div class="feedback-block">
-                            <img src="assets/images/logo/p_logo_66.png" alt="" class="logo">
-                            <blockquote>"Best decision ever, smooth hosting experience!"</blockquote>
+                            <img [src]="testimonial.logo" alt="" class="logo">
+                            <blockquote>{{ testimonial.quote }}</blockquote>
                             <div class="d-flex align-items-center justify-content-between">
-                                <div class="name text-white"><span class="fw-500">Zubayer Bin,</span> Engineer</div>
-                                <img src="assets/images/icon/icon_56.svg" alt="" class="icon">
-                            </div>
-                        </div>
-                        <!-- /.feedback-block -->j
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="item">
-                        <div class="feedback-block">
-                            <img src="assets/images/logo/p_logo_65.png" alt="" class="logo">
-                            <blockquote>"Best decision ever, smooth hosting experience!"</blockquote>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="name text-white"><span class="fw-500">Hasan Abdul,</span> Engineer</div>
-                                <img src="assets/images/icon/icon_56.svg" alt="" class="icon">
-                            </div>
-                        </div>
-                        <!-- /.feedback-block -->
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="item">
-                        <div class="feedback-block">
-                            <img src="assets/images/logo/p_logo_66.png" alt="" class="logo">
-                            <blockquote>"Best decision ever, smooth hosting experience!"</blockquote>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="name text-white"><span class="fw-500">Rashed Ka,</span> Engineer</div>
-                                <img src="assets/images/icon/icon_56.svg" alt="" class="icon">
-                            </div>
-                        </div>
-                        <!-- /.feedback-block -->
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="item">
-                        <div class="feedback-block">
-                            <img src="assets/images/logo/p_logo_65.png" alt="" class="logo">
-                            <blockquote>"Best decision ever, smooth hosting experience!"</blockquote>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="name text-white"><span class="fw-500">Adul Kashem,</span> Engineer</div>
-                                <img src="assets/images/icon/icon_56.svg" alt="" class="icon">
+                                <div class="name text-white"><span class="fw-500">{{ testimonial.name }},</span> {{ testimonial.role }}</div>
+                                <img [src]="testimonial.icon" alt="" class="icon">
                             </div>
                         </div>
                         <!-- /.feedback-block -->

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { CountUpModule } from 'ngx-countup';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { TestimonialsService, Testimonial } from '../../../../services/testimonials.service';
 enum Plans{
   Monthy,
   Yearly
@@ -12,11 +13,13 @@ enum Plans{
   standalone: true,
   imports: [CountUpModule,CarouselModule,NgbAccordionModule,CommonModule],
   templateUrl: './testimonials-banner-kodeo-website.component.html',
-  styleUrl: './testimonials-banner-kodeo-website.component.scss'
+  styleUrl: './testimonials-banner-kodeo-website.component.scss',
+  providers: [TestimonialsService]
 })
 export class TestimonialsBannerKodeoWebsiteComponent {
   plans=Plans
   selectedPlan = Plans.Monthy
+  testimonials: Testimonial[] = [];
   customOptions: OwlOptions = {
     loop: true,
     margin: 10,
@@ -33,4 +36,10 @@ export class TestimonialsBannerKodeoWebsiteComponent {
     autoplayTimeout: 3000,
     autoplayHoverPause: true
   };
+
+  constructor(private testimonialsService: TestimonialsService) {}
+
+  ngOnInit() {
+    this.testimonials = this.testimonialsService.getAll();
+  }
 }
