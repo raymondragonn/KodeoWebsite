@@ -2,7 +2,7 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, HostListener, inject, Re
 import { NgbAccordionModule, NgbCollapseModule, NgbDropdownMenu, NgbDropdownModule, NgbModule, NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 import { MENUITEMS } from '../../nav-items/menu-data';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { ScrollServiceService } from '../../../../../app/services/scroll-service.service';
 
 interface DigitalAgencyMenuItems {
@@ -26,6 +26,7 @@ interface SubMenu {
 })
 export class DigitalAgencyHeaderComponent {
   private offcanvasService = inject(NgbOffcanvas);
+  isInSubmenu: boolean = false;
   digitalMenusItems: DigitalAgencyMenuItems[] = [
     { label: 'Inicio', link: '', isCollapsed: true },
     { label: 'Servicios', scrollId: 'servicesSection', isCollapsed: true },
@@ -45,12 +46,28 @@ export class DigitalAgencyHeaderComponent {
 
     { label: 'Preguntas Frecuentes', scrollId: 'faqSection', isCollapsed: true },
   ]
+  
 
-  constructor(private renderer: Renderer2, public scrollService: ScrollServiceService, private el: ElementRef) { }
+  constructor(private router: Router, private renderer: Renderer2, public scrollService: ScrollServiceService, private el: ElementRef) { }
 
   ngOnInit() { }
   ngOnDestroy() {
     this.offcanvasService.dismiss()
+  }
+
+  verificarSubMenu(submenu: any){
+    console.log(submenu.link)
+    this.isInSubmenu = true;
+    
+    // this.router.navigate([submenu.link]).then(() => {
+    //   // Opcional: cerrar offcanvas si lo estás usando
+    //   // this.offcanvas.dismiss();
+    
+    //   // Recargar la página completa
+    //   window.location.reload();
+    // });
+    // window.location.reload();
+    
   }
 
   scrollToContact() {

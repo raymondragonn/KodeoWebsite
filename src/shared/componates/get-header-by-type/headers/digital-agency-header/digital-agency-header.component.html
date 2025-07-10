@@ -38,7 +38,7 @@
                         <!-- Menú dinámico existente -->
                         <li class="nav-item" *ngFor="let menu of digitalMenusItems" (click)="toggleCollapse(menu)">
                             <ng-container *ngIf="menu.scrollId; else normalLink">
-                                <a href="javascript:void(0)" (click)="scrollService.scrollToElement(menu.scrollId); offcanvas.dismiss()">{{ menu.label }}</a>
+                                <a href="javascript:void(0)" (click)="scrollService.scrollToElement(menu.scrollId); verificarSubMenu(menu.scrollId); offcanvas.dismiss()">{{ menu.label }}</a>
                             </ng-container>
                             <ng-template #normalLink>
                                 <ng-container *ngIf="menu.subMenus?.length; else singleLink">
@@ -46,7 +46,7 @@
     
                                     <ul class="dropdown-menu" [ngbCollapse]="menu.isCollapsed">
                                         <li *ngFor="let subMenu of menu.subMenus">
-                                            <a [routerLink]="subMenu.link" class="dropdown-item"><span>{{ subMenu.label }}</span></a>
+                                            <a (click)="verificarSubMenu(subMenu)" [routerLink]="subMenu.link" class="dropdown-item"><span>{{ subMenu.label }}</span></a>
                                         </li>
                                     </ul>
                                 </ng-container>
