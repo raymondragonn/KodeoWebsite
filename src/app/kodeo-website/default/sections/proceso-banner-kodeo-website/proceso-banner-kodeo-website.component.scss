@@ -1,0 +1,216 @@
+.linea {
+  width: 2px;              
+  height: 140px;            
+  background-color: #fff;  
+  margin-right: 1rem;          
+  display: inline-block;   
+  transition: all 0.3s ease;
+}
+
+.font-size-4rem{
+    font-size: 4rem;
+}
+
+.proceso {
+  display: flex; 
+  flex-direction: column; 
+  align-items: start; 
+  width: calc((100% - .1*3rem - 1.75vw*3) / 4);
+  cursor: pointer;
+  min-height: 200px; /* Altura mínima fija para reservar espacio */
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover general - todas las fases se tornan grises */
+.conjuntoProceos:hover .proceso {
+  opacity: 0.3;
+}
+
+.conjuntoProceos:hover .proceso .linea {
+  background-color: #c8c8c8;
+}
+
+.conjuntoProceos:hover .proceso h1 {
+  color: #c8c8c8;
+}
+
+.conjuntoProceos:hover .proceso p {
+  color: #c8c8c8;
+}
+
+/* Hover específico - la fase activa se mantiene en blanco */
+.conjuntoProceos:hover .proceso:hover {
+  opacity: 1;
+}
+
+.conjuntoProceos:hover .proceso:hover .linea {
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.conjuntoProceos:hover .proceso:hover h1 {
+  color: #fff;
+}
+
+.conjuntoProceos:hover .proceso:hover p {
+  color: #fff;
+}
+
+.conjuntoProceos {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    height: max-content;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* Estilo para el texto descriptivo */
+.proceso p {
+  position: absolute;
+  top: calc(100% - 20px); /* Acercar el texto al título */
+  left: 1.2rem; /* Alineado con el contenido (línea + margen) */
+  width: calc(100% - 2.5rem); /* Ajustar ancho para considerar el padding */
+  margin-top: 0; /* Sin margen adicional */
+  font-size: 1.5rem; /* Texto más grande */
+  color: #fff; /* Color blanco */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  line-height: 1.5; /* Mejor espaciado entre líneas */
+}
+
+.proceso p.animated-fadeInDown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1200px) {
+  .conjuntoProceos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    gap: 2rem;
+  }
+
+  .proceso {
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) 2fr;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100px;
+    position: static;
+    gap: 0 2rem;
+  }
+
+  .proceso-bloque {
+    min-height: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .linea {
+    height: 100%;
+    min-height: 100px;
+    align-self: stretch;
+    display: block;
+    background-color: #fff;
+  }
+
+  .proceso p {
+    grid-column: 2;
+    position: static;
+    margin-left: 0;
+    margin-top: 0;
+    font-size: 1.2rem;
+    opacity: 1;
+    transform: none;
+    transition: none;
+    line-height: 1.5;
+    align-self: flex-start;
+    max-width: 100%;
+    animation: none !important;
+    color: #fff;
+  }
+
+  .proceso p.animated-fadeInDown {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
+  .linea {
+    width: 2px !important;
+    background-color: #fff !important;
+    opacity: 1 !important;
+    display: block;
+    z-index: 1;
+    height: 100%;
+    min-height: 100px;
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 768px) {
+  .proceso {
+    min-height: 140px;
+  }
+  .proceso-bloque {
+    min-height: 140px;
+    height: 140px;
+    align-items: center;
+  }
+  .linea {
+    height: 140px;
+    min-height: 140px;
+  }
+  .linea {
+    width: 2px !important;
+    background-color: #fff !important;
+    opacity: 1 !important;
+    display: block;
+    z-index: 1;
+    height: 140px;
+    min-height: 140px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .proceso {
+    min-height: 140px;
+  }
+  .proceso-bloque {
+    min-height: 140px;
+    height: 140px;
+    align-items: center;
+  }
+  .linea {
+    height: 140px;
+    min-height: 140px;
+    width: 2px;
+    background-color: #fff !important;
+    opacity: 1 !important;
+    display: block;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-fadeInDown {
+  animation: fadeInDown 0.5s ease-out;
+} 

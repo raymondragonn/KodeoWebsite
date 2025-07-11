@@ -7,11 +7,12 @@ import { FaqBannerKodeoWebsiteComponent } from './sections/faq-banner-kodeo-webs
 import { TestimonialsBannerKodeoWebsiteComponent } from './sections/testimonials-banner-kodeo-website/testimonials-banner-kodeo-website.component';
 import { ContactusBannerKodeoWebsiteComponent } from './sections/contactus-banner-kodeo-website/contactus-banner-kodeo-website.component';
 import { QuoteBannerKodeoWebsiteComponent } from './sections/quote-banner-kodeo-website/quote-banner-kodeo-website.component';
+import { ProcesoBannerKodeoWebsiteComponent } from './sections/proceso-banner-kodeo-website/proceso-banner-kodeo-website.component';
 
 @Component({
   selector: 'app-default',
   standalone: true,
-  imports: [HeroBannerKodeoWebsiteComponent,OurservicesBannerKodeoWebsiteComponent,IntegrationBannerKodeoWebsiteComponent,LatestworkBannerKodeoWebsiteComponent,FaqBannerKodeoWebsiteComponent,TestimonialsBannerKodeoWebsiteComponent,ContactusBannerKodeoWebsiteComponent,QuoteBannerKodeoWebsiteComponent],
+  imports: [HeroBannerKodeoWebsiteComponent,OurservicesBannerKodeoWebsiteComponent,IntegrationBannerKodeoWebsiteComponent,LatestworkBannerKodeoWebsiteComponent,FaqBannerKodeoWebsiteComponent,TestimonialsBannerKodeoWebsiteComponent,ContactusBannerKodeoWebsiteComponent,QuoteBannerKodeoWebsiteComponent,ProcesoBannerKodeoWebsiteComponent],
   templateUrl: './default.component.html',
   styleUrl: './default.component.scss'
 })

@@ -14,7 +14,7 @@ import { PortafolioService, PortfolioItem } from '../../../../services/portafoli
 
 export class LatestworkBannerKodeoWebsiteComponent {
   portfolioItems: PortfolioItem[] = [];
-  textoSeleccionado: string = ''; // Almacena el paso seleccionado
+  
   constructor(private portfolioService: PortafolioService) {
     
 
@@ -24,15 +24,6 @@ export class LatestworkBannerKodeoWebsiteComponent {
 
   ngOnInit() {
     this.portfolioItems = this.portfolioService.getAll();
-  }
-
-  mostrarTexto(paso: string): void {
-    // Si el paso seleccionado ya está visible, lo ocultamos, sino lo mostramos
-    if (this.textoSeleccionado === paso) {
-      this.textoSeleccionado = ''; // Ocultar el texto si se hace clic en el mismo paso
-    } else {
-      this.textoSeleccionado = paso; // Mostrar el texto del paso seleccionado
-    }
   }
   
   

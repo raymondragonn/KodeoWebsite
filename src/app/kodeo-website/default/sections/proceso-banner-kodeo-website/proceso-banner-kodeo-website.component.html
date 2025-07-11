@@ -1,0 +1,59 @@
+<div class="project-section-one mt-0 lg-mt-0 pt-80 pb-50" style="background-color: black;">
+    <div class="container xl">
+        <div class="title-three pb-10" style="margin-top: 1rem;">
+            <h1 class="hero-heading text-uppercase wow fadeInUp">
+                <span style="font-weight: 800;">Creación en cuatro fases</span>.
+            </h1>
+        </div>
+        <div class="conjuntoProceos">
+            <div class="proceso">
+                <div (click)="mostrarTexto('discovery')" style="display: flex;">
+                    <div class="linea"></div>
+                    <div>
+                        <h1 class="hero-heading text-uppercase font-size-4rem" style="font-weight: 800;">01.</h1>
+                        <h1 class="">Planificación</h1>
+                    </div>
+                </div>
+                <p *ngIf="fasesVisibles['discovery']" [ngClass]="'animated-fadeInDown'">
+                    Definición y planificación detallada del proyecto web.
+                </p>
+            </div>
+            <div class="proceso">
+                <div (click)="mostrarTexto('exploration')" style="display: flex;">
+                    <div class="linea"></div>
+                    <div>
+                        <h1 class="hero-heading text-uppercase font-size-4rem" style="font-weight: 800;">02.</h1>
+                        <h1 class="">Diseño</h1>
+                    </div>
+                </div>
+                <p *ngIf="fasesVisibles['exploration']" [ngClass]="'animated-fadeInDown'">
+                    Diseño de prototipo y experiencia de usuario en Figma.
+                </p>
+            </div>
+            <div class="proceso">
+                <div (click)="mostrarTexto('execution')" style="display: flex;">
+                    <div class="linea"></div>
+                    <div>
+                        <h1 class="hero-heading text-uppercase font-size-4rem" style="font-weight: 800;">03.</h1>
+                        <h1 class="">Desarrollo</h1>
+                    </div>
+                </div>
+                <p *ngIf="fasesVisibles['execution']" [ngClass]="'animated-fadeInDown'">
+                    Desarrollo funcional usando tecnologías web y APIs externas.
+                </p>
+            </div>
+            <div class="proceso">
+                <div (click)="mostrarTexto('implementacion')" style="display: flex;">
+                    <div class="linea"></div>
+                    <div>
+                        <h1 class="hero-heading text-uppercase font-size-4rem" style="font-weight: 800;">04.</h1>
+                        <h1 class="">Publicación</h1>
+                    </div>
+                </div>
+                <p *ngIf="fasesVisibles['implementacion']" [ngClass]="'animated-fadeInDown'">
+                    Pruebas, corrección de errores y despliegue seguro del sitio.
+                </p>
+            </div>
+        </div>
+    </div>
+</div> 
