@@ -34,4 +34,97 @@
             <!-- /.project-block-one -->
         </div>
     </div>
+    
+    <div style="padding: 7rem;">
+        <div class="title-three pb-10" style="margin-top: 1rem;">
+            <h1 class="hero-heading text-uppercase wow fadeInUp">
+                <span style="font-weight: 800;">Proceso</span>.
+            </h1>
+        </div>
+    
+        <div class="conjuntoProceos">
+            <div class="proceso">
+                 <div (click)="mostrarTexto('discovery')" style="display: flex;" >
+                    <div class="linea"></div>
+                    <div>
+                        <h1 class="hero-heading text-uppercase font-size-4rem" style="font-weight: 800;">01</h1>
+                        <h1 class="">Discovery</h1>
+                    </div>
+                </div>
+                <p
+                *ngIf="textoSeleccionado === 'discovery'"
+                [ngClass]="'animated-fadeInDown'"
+                style="margin-top: 1rem; font-size: 1rem;"
+                >
+                Texto relacionado con el paso Discovery.
+                </p>
+
+            </div>
+           
+            
+           
+            
+            <div class="proceso">
+                <div (click)="mostrarTexto('exploration')" style="display: flex;">
+                    <div class="linea"></div>
+                    <div>
+                        <h1 class="hero-heading text-uppercase font-size-4rem" style="font-weight: 800;">02</h1>
+                        <h1 class="">Exploration</h1>
+                    </div>
+                </div>
+                <p
+                *ngIf="textoSeleccionado === 'exploration'"
+                [ngClass]="'animated-fadeInDown'"
+                style="margin-top: 1rem; font-size: 1rem;"
+                >
+                Texto relacionado con el paso Discovery.
+                </p>
+
+            </div>
+            
+            
+            
+            <div class="proceso">
+                <div (click)="mostrarTexto('execution')" style="display: flex;">
+                    <div class="linea"></div>
+                    <div>
+                        <h1 class="hero-heading text-uppercase font-size-4rem" style="font-weight: 800;">03</h1>
+                        <h1 class="">Execution</h1>
+                    </div>
+                </div>
+                <p
+                *ngIf="textoSeleccionado === 'execution'"
+                [ngClass]="'animated-fadeInDown'"
+                style="margin-top: 1rem; font-size: 1rem;"
+                >
+                Texto relacionado con el paso Discovery.
+                </p>
+
+            </div>
+            
+            
+            
+            
+            <div class="proceso">
+                <div (click)="mostrarTexto('implementacion')" style="display: flex;">
+                    <div class="linea"></div>
+                    <div>
+                        <h1 class="hero-heading text-uppercase font-size-4rem" style="font-weight: 800;">04</h1>
+                        <h1 class="">Implementación</h1>
+                    </div>
+                </div>
+                
+                <p
+                *ngIf="textoSeleccionado === 'implementacion'"
+                [ngClass]="'animated-fadeInDown'"
+                style="margin-top: 1rem; font-size: 1rem;"
+                >
+                Texto relacionado con el paso Discovery.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    
 </div>

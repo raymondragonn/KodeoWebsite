@@ -36,37 +36,22 @@
                 <div class="sidebar-nav-item">
                     <ul class="style-none">
                         <!-- Menú dinámico existente -->
-                        <li class="nav-item" *ngFor="let menu of digitalMenusItems">
-                            <!-- Caso para Portafolio: tiene subMenus y scrollId -->
-                            <ng-container *ngIf="menu.label === 'Portafolio'; else normalMenu">
-                                <div class="d-flex align-items-center">
-                                    <a (click)="scrollService.scrollToElement(menu.scrollId!); offcanvas.dismiss()" class="dropdown-toggle me-2">{{ menu.label }}</a>
-                                    <button class="btn p-0 border-0 bg-transparent" (click)="toggleCollapse(menu)" type="button" aria-label="Desplegar submenú">
-                                        <i class="fa fa-chevron-down"></i>
-                                    </button>
-                                </div>
-                                <ul class="dropdown-menu" [ngbCollapse]="menu.isCollapsed">
-                                    <li *ngFor="let subMenu of menu.subMenus">
-                                        <a [routerLink]="subMenu.link" class="dropdown-item"><span>{{ subMenu.label }}</span></a>
-                                    </li>
-                                </ul>
+                        <li class="nav-item" *ngFor="let menu of digitalMenusItems" (click)="toggleCollapse(menu)">
+                            <ng-container *ngIf="menu.scrollId; else normalLink">
+                                <a href="javascript:void(0)" (click)="scrollService.scrollToElement(menu.scrollId); verificarSubMenu(menu.scrollId); offcanvas.dismiss()">{{ menu.label }}</a>
                             </ng-container>
-                            <ng-template #normalMenu>
-                                <ng-container *ngIf="menu.scrollId; else normalLink">
-                                    <a (click)="scrollService.scrollToElement(menu.scrollId!); offcanvas.dismiss()">{{ menu.label }}</a>
+                            <ng-template #normalLink>
+                                <ng-container *ngIf="menu.subMenus?.length; else singleLink">
+                                    <a class="dropdown-toggle" href="javascript:void(0)" role="button" data-bs-toggle="dropdown" aria-expanded="true">{{ menu.label }}</a>
+    
+                                    <ul class="dropdown-menu" [ngbCollapse]="menu.isCollapsed">
+                                        <li *ngFor="let subMenu of menu.subMenus">
+                                            <a (click)="verificarSubMenu(subMenu)" [routerLink]="subMenu.link" class="dropdown-item"><span>{{ subMenu.label }}</span></a>
+                                        </li>
+                                    </ul>
                                 </ng-container>
-                                <ng-template #normalLink>
-                                    <ng-container *ngIf="menu.subMenus?.length; else singleLink">
-                                        <a class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="true" (click)="toggleCollapse(menu)">{{ menu.label }}</a>
-                                        <ul class="dropdown-menu" [ngbCollapse]="menu.isCollapsed">
-                                            <li *ngFor="let subMenu of menu.subMenus">
-                                                <a [routerLink]="subMenu.link" class="dropdown-item"><span>{{ subMenu.label }}</span></a>
-                                            </li>
-                                        </ul>
-                                    </ng-container>
-                                    <ng-template #singleLink>
-                                        <li class="nav-item"><a [routerLink]="menu.link">{{ menu.label }}</a></li>
-                                    </ng-template>
+                                <ng-template #singleLink>
+                                    <li class="nav-item"><a [routerLink]="menu.link">{{ menu.label }}</a></li>
                                 </ng-template>
                             </ng-template>
                         </li>
