@@ -1,18 +1,52 @@
 .feedback-section-nine {
     background-color: black;
 }
-.feedback-block blockquote {
-  font-size: 1.5rem; // Puedes ajustar este valor según lo pequeño que lo quieras
+.feedback-block {
+  background-color: #161616;
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  margin: 1.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 320px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.feedback-block:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.28);
 }
 .feedback-block .logo {
   width: 80px;
   height: 80px;
   object-fit: contain;
+  margin-bottom: 1rem;
+}
+.feedback-block blockquote {
+  font-size: 1.5rem;
+  color: #f1f1f1;
+  font-style: italic;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  line-height: 1.4;
 }
 .feedback-block .name {
   font-size: 1.2rem;
+  color: #fff;
+  margin-top: 1rem;
+}
+.feedback-block .icon {
+  width: 32px;
+  height: 32px;
+  margin-left: 1rem;
 }
 @media (max-width: 600px) {
+  .feedback-block {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    min-height: 220px;
+  }
   .feedback-block blockquote {
     font-size: 1rem;
   }
@@ -22,5 +56,9 @@
   }
   .feedback-block .name {
     font-size: 0.85rem;
+  }
+  .feedback-block .icon {
+    width: 22px;
+    height: 22px;
   }
 }

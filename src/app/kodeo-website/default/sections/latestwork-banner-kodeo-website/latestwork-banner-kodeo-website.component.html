@@ -9,24 +9,26 @@
             <div class="project-block-one overflow-hidden mt-60 lg-mt-20 card-modify"
                 *ngFor="let item of portfolioItems">
                 <div class="row gx-0">
+                    <div class="col-lg-6 d-flex inside-card">
+                        <div class="image-meta w-100 position-relative image-hover-container">
+                            <a [routerLink]="item.link">
+                                <img [src]="item.imageUrl" alt="" class="ms-auto wow fadeInRight image-hover">
+                            </a>
+                        </div>
+                    </div>
                     <div class="col-lg-6 d-flex">
                         <div class="text-meta w-100 inside-card">
                             <div class="num font-Montserrat">{{ item.num }}</div>
-                            <a [routerLink]="item.link" class="title text-uppercase fw-500 title-project">{{ item.title
-                                }}</a>
+                            <a [routerLink]="item.link" class="title text-uppercase fw-500 title-project project-title-animated">
+                                {{ item.title }}
+                                <span class="arrow-animated">&#8594;</span>
+                            </a>
                             <p class="fs-28 text-white description-project">{{ item.description }}</p>
                             <ul class="style-none d-flex flex-wrap">
                                 <li *ngFor="let tag of item.tags">
                                     <a [routerLink]="item.link">{{ tag }}</a>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 d-flex inside-card">
-                        <div class="image-meta w-100 position-relative image-hover-container">
-                            <a [routerLink]="item.link">
-                                <img [src]="item.imageUrl" alt="" class="ms-auto wow fadeInRight image-hover">
-                            </a>
                         </div>
                     </div>
                 </div>
