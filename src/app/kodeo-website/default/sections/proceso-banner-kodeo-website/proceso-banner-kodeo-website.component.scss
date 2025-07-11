@@ -81,6 +81,7 @@
   transform: translateY(-10px);
   transition: all 0.3s ease;
   line-height: 1.5; /* Mejor espaciado entre líneas */
+  word-break: break-word;
 }
 
 .proceso p.animated-fadeInDown {
@@ -155,6 +156,9 @@
     min-height: 100px;
     align-self: stretch;
   }
+  .project-section-one {
+    padding-bottom: 0 !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -197,6 +201,33 @@
     background-color: #fff !important;
     opacity: 1 !important;
     display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .proceso p {
+    font-size: 1.2rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .proceso p {
+    font-size: 1rem;
+    max-width: 100%;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .proceso p {
+    font-size: 0.95rem;
+    max-width: 100%;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+    line-height: 1.3;
   }
 }
 
