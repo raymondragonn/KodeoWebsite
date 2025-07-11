@@ -1,64 +1,320 @@
 .feedback-section-nine {
     background-color: black;
+    position: relative;
+    overflow: hidden;
 }
+
 .feedback-block {
-  background-color: #161616;
-  border: none;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  background: linear-gradient(135deg, #161616 0%, #1a1a1a 100%);
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+  padding: 2.5rem 2rem 2rem 2rem;
   margin: 1.5rem 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 320px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  min-height: 380px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
+
+.feedback-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 18px;
+}
+
 .feedback-block:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.28);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 16px 48px 0 rgba(0,0,0,0.4);
+  border-color: rgba(255,255,255,0.2);
 }
+
+.feedback-block:hover::before {
+  opacity: 1;
+}
+
+/* Header del testimonio */
+.testimonial-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
 .feedback-block .logo {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
-  margin-bottom: 1rem;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.1);
+  padding: 12px;
+  transition: all 0.3s ease;
 }
+
+.feedback-block:hover .logo {
+  transform: scale(1.1);
+  background: rgba(255,255,255,0.15);
+}
+
+/* Contenido del testimonio */
+.testimonial-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
 .feedback-block blockquote {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #f1f1f1;
   font-style: italic;
-  margin: 0 0 1.5rem 0;
-  text-align: center;
-  line-height: 1.4;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 400;
+  position: relative;
+  padding: 0 1rem;
 }
-.feedback-block .name {
-  font-size: 1.2rem;
+
+.feedback-block:hover blockquote {
   color: #fff;
-  margin-top: 1rem;
 }
-.feedback-block .icon {
-  width: 32px;
-  height: 32px;
-  margin-left: 1rem;
+
+/* Footer del testimonio */
+.testimonial-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 2;
 }
-@media (max-width: 600px) {
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.rating {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.rating i {
+  color: #FFD700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.feedback-block:hover .rating i {
+  transform: scale(1.1);
+  color: #FFA500;
+}
+
+.feedback-block .name {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.feedback-block .name .fw-600 {
+  font-weight: 600;
+  color: #fff;
+}
+
+.feedback-block .name .role {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  font-weight: 400;
+  color: #ccc;
+}
+
+/* Badge de comillas */
+.testimonial-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.testimonial-badge i {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.feedback-block:hover .testimonial-badge {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .feedback-block {
-    padding: 1.2rem 0.5rem 1rem 0.5rem;
-    min-height: 220px;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    min-height: 320px;
   }
+  
   .feedback-block blockquote {
+    font-size: 1.1rem;
+  }
+  
+  .feedback-block .logo {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .feedback-block .name {
     font-size: 1rem;
   }
+  
+  .feedback-block .name .role {
+    font-size: 0.8rem;
+  }
+  
+  .testimonial-badge {
+    width: 32px;
+    height: 32px;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .testimonial-badge i {
+    font-size: 0.8rem;
+  }
+  
+  .rating i {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .feedback-block {
+    padding: 1.5rem 1rem 1rem 1rem;
+    min-height: 280px;
+  }
+  
+  .feedback-block blockquote {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+  
   .feedback-block .logo {
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
   }
+  
   .feedback-block .name {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
-  .feedback-block .icon {
-    width: 22px;
-    height: 22px;
+  
+  .feedback-block .name .role {
+    font-size: 0.75rem;
+  }
+  
+  .testimonial-badge {
+    width: 28px;
+    height: 28px;
+    top: 12px;
+    right: 12px;
+  }
+  
+  .testimonial-badge i {
+    font-size: 0.7rem;
+  }
+  
+  .rating i {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animaciones adicionales */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feedback-block {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Efectos de hover mejorados */
+.feedback-block:hover {
+  background: linear-gradient(135deg, #1a1a1a 0%, #202020 100%);
+}
+
+/* Estilos para el carousel */
+.feedback-slider-six {
+  position: relative;
+}
+
+.feedback-slider-six .owl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.feedback-slider-six .owl-nav button {
+  width: 50px;
+  height: 50px;
+  background: rgba(255,255,255,0.1) !important;
+  border: 2px solid rgba(255,255,255,0.2) !important;
+  border-radius: 50%;
+  color: #fff !important;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.feedback-slider-six .owl-nav button:hover {
+  background: rgba(255,255,255,0.2) !important;
+  border-color: rgba(255,255,255,0.4) !important;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .feedback-slider-six .owl-nav {
+    display: none;
   }
 }

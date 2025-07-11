@@ -1,28 +1,48 @@
-<div id="testimonialsSection" class="feedback-section-nine feedback-change position-relative z-1 pt-0 pb-30 mt-0">
+<div id="testimonialsSection" class="feedback-section-nine feedback-change position-relative z-1 pt-80 pb-80 mt-0" style="background-color: #000000;">
     <div class="container">
-        <div class="title-three pb-20">
-            <h1 class="hero-heading text-uppercase wow fadeInUp text-end">Algunas <span style="font-weight: 800;">experiencias</span> de nuestros clientes.</h1>
+        <div class="title-three pb-40">
+            <h1 class="hero-heading text-uppercase wow fadeInUp text-center">Experiencias que <span style="font-weight: 800; color: #fff;">transforman</span> negocios</h1>
+            <p class="text-center text-white mt-3 fs-18 opacity-75">Descubre lo que nuestros clientes dicen sobre nuestros servicios</p>
         </div>
     </div>
+    
     <div class="wrapper">
         <div class="feedback-slider-six">
             <owl-carousel-o [options]="customOptions">
                 <ng-template carouselSlide *ngFor="let testimonial of testimonials">
                     <div class="item">
                         <div class="feedback-block">
-                            <img [src]="testimonial.logo" alt="" class="logo">
-                            <blockquote>{{ testimonial.quote }}</blockquote>
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="name text-white"><span class="fw-500">{{ testimonial.name }},</span> {{ testimonial.role }}</div>
-                                <img [src]="testimonial.icon" alt="" class="icon">
+                            <div class="testimonial-header">
+                                <img [src]="testimonial.logo" alt="" class="logo">
+                            </div>
+                            
+                            <div class="testimonial-content">
+                                <blockquote>{{ testimonial.quote }}</blockquote>
+                            </div>
+                            
+                            <div class="testimonial-footer">
+                                <div class="author-info">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="name text-white">
+                                        <span class="fw-600">{{ testimonial.name }}</span>
+                                        <span class="role">{{ testimonial.role }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-badge">
+                                <i class="fas fa-quote-left"></i>
                             </div>
                         </div>
-                        <!-- /.feedback-block -->
                     </div>
                 </ng-template>
             </owl-carousel-o>
         </div>
-        <!-- /.feedback-slider-six -->
     </div>
-    <img src="assets/images/shape/shape_81.svg" alt="" class="shapes shape_01">
 </div>

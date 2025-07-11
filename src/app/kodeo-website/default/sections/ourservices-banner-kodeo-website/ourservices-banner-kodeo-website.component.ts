@@ -62,7 +62,7 @@ export class OurservicesBannerKodeoWebsiteComponent {
     nav: true,
     navText: ['<i class="fa-solid fa-arrow-left-long"></i>', '<i class="fa-solid fa-arrow-right-long"></i>'],
     dots: false,
-    items: 4,
+    items: 3,
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
@@ -71,11 +71,14 @@ export class OurservicesBannerKodeoWebsiteComponent {
       0: {
         items: 1,
       },
-      600: {
-        items: 1,
+      992: {
+        items: 2,
       },
-      1000: {
-        items: 4,
+      1200: {
+        items: 3,
+      },
+      1400: {
+        items: 3,
       },
     },
   };
