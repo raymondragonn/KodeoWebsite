@@ -29,9 +29,9 @@ export class DigitalAgencyHeaderComponent {
   digitalMenusItems: DigitalAgencyMenuItems[] = [
     { label: 'Inicio', link: '', isCollapsed: true },
     { label: 'Servicios', scrollId: 'servicesSection', isCollapsed: true },
-    { label: 'Portafolio', scrollId: 'projectsSection', isCollapsed: true },
     {
-      label: 'Portafolio Detallado',
+      label: 'Portafolio',
+      scrollId: 'projectsSection',
       isCollapsed: false,
       subMenus: [
         { label: 'Plataforma Web | AixaCibb', link: '/digital-agency/project-details/1' },
@@ -69,6 +69,7 @@ export class DigitalAgencyHeaderComponent {
     });
   }
 
+  // toggleCollapse ahora solo debe llamarse desde la flecha en el HTML, no desde el texto del menú.
   toggleCollapse(menu: DigitalAgencyMenuItems): void {
     if (!menu.subMenus?.length) {
       return
