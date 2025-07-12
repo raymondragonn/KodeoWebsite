@@ -47,3 +47,43 @@
     font-size: 1.3rem;
   }
 }
+
+.emailKodeo{
+  text-align: end;
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+
+.noSeasExtraño {
+  font-size: 1.5rem; 
+  text-align: end;
+}
+
+.copyRightKodeo{
+  text-align: end;
+}
+
+@media (max-width: 940px) {
+  .footer{
+    flex-direction: column;
+  }
+  .emailKodeo {
+    text-align: start;
+  }
+  .noSeasExtraño{
+    text-align: start;
+    margin-top: 1rem;
+  }
+  .copyRightKodeo{
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 972px){
+  .emailKodeo{
+    font-size: 2.5rem;
+    font-weight: bold;
+    
+  }
+}
