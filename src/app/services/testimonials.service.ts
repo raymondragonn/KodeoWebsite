@@ -21,11 +21,11 @@ export class TestimonialsService {
       icon: 'assets/images/icon/icon_56.svg'
     },
     {
-      logo: 'assets/images/logo/p_logo_65.png',
-      quote: 'Best decision ever, smooth hosting experience!',
-      name: 'Hasan Abdul',
-      role: 'Engineer',
-      icon: 'assets/images/icon/icon_56.svg'
+      logo: 'assets/images/assets/AIXA.png',
+      quote: 'Los chicos cumplieron con todo lo que les pedi, me ayudaron a crear una pagina web que se ve muy bien y funciona perfecto.',
+      name: 'Jessica Barradas',
+      role: 'CEO',
+      icon: 'assets/images/assets/AIXA.png'
     },
     {
       logo: 'assets/images/logo/p_logo_66.png',
