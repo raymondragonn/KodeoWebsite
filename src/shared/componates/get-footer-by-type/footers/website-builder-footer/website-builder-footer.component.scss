@@ -12,18 +12,19 @@
     min-height: 220px;
   }
   .footer-title {
-    margin-bottom: 24px;
-    font-size: 2rem;
+    margin-bottom: 18px;
+    font-size: 1.1rem;
     font-weight: 400;
   }
   .footer-social-links {
-    font-size: 2.8rem;
+    font-size: 32px;
     line-height: 1.1;
   }
   .footer-social-link {
-    font-weight: 700;
+    font-weight: 800;
     color: inherit;
     text-decoration: none;
+    font-size: 32px;
   }
   .footer-social-link:hover {
     color: #b3b3b3;
@@ -34,8 +35,8 @@
     margin-bottom: 0.5rem;
   }
   .footer-contact-email {
-    font-size: 3.2rem;
-    font-weight: bold;
+    font-size: 1.3rem;
+    font-weight: 600;
   }
   .footer-menu {
     font-size: 1.5rem;
@@ -51,9 +52,9 @@
 
 .emailKodeo{
   text-align: end;
-  font-size: 3.2rem;
-  font-weight: bold;
-  margin-bottom: 25px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .noSeasExtraño {
@@ -74,7 +75,7 @@
 
 .redes {
   font-weight: 700; 
-  font-size: 2.8rem;
+  font-size: 32px;
 }
 
 @media (max-width: 940px) {
@@ -83,19 +84,68 @@
   }
   .emailKodeo {
     text-align: start;
+    font-size: 1rem;
+    margin-bottom: 6px;
   }
   .noSeasExtraño{
     text-align: start;
     margin-top: 2rem;
+    font-size: 1.1rem;
   }
-  
   .footer-edit{
-    padding: 50px;
+    padding: 30px;
   }
   .footer-menu{
-    
+    font-size: 1.1rem;
+    display: none; /* Ocultar las secciones en responsive */
   }
+  .redes {
+    font-size: 1.7rem;
+  }
+  .footer-contact-title {
+    font-size: 1.1rem;
+  }
+  .footer-copyright {
+    font-size: 1rem;
+  }
+  .footer-title {
+    font-size: 0.95rem;
+  }
+  .footer-social-link {
+    font-size: 1.5rem;
+  }
+}
 
+@media (max-width: 600px) {
+  .footer-edit {
+    padding: 15px;
+  }
+  .emailKodeo {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+  }
+  .redes {
+    font-size: 1.2rem;
+  }
+  .footer-menu {
+    font-size: 0.95rem;
+    display: none; /* Ocultar las secciones en responsive */
+  }
+  .footer-contact-title {
+    font-size: 0.95rem;
+  }
+  .noSeasExtraño {
+    font-size: 0.95rem;
+  }
+  .footer-copyright {
+    font-size: 0.85rem;
+  }
+  .footer-title {
+    font-size: 0.85rem;
+  }
+  .footer-social-link {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 972px){
@@ -110,6 +160,9 @@
   }
   .copyRightKodeo{
     text-align: center;
+  }
+  .footer-menu {
+    display: none; /* Ocultar las secciones en responsive */
   }
 }
 
