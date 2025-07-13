@@ -39,6 +39,7 @@
   }
   .footer-menu {
     font-size: 1.5rem;
+    justify-content: end;
   }
   .footer-copyright-row {
     border-color: #333 !important;
@@ -52,6 +53,7 @@
   text-align: end;
   font-size: 3.2rem;
   font-weight: bold;
+  margin-bottom: 25px;
 }
 
 .noSeasExtraño {
@@ -63,6 +65,18 @@
   text-align: end;
 }
 
+.footer-edit{
+  background: #161616;
+  color: #fff;
+  font-family: "Gordita", Arial, sans-serif;
+  padding: 50px 100px;
+}
+
+.redes {
+  font-weight: 700; 
+  font-size: 2.8rem;
+}
+
 @media (max-width: 940px) {
   .footer{
     flex-direction: column;
@@ -72,10 +86,14 @@
   }
   .noSeasExtraño{
     text-align: start;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
-  .copyRightKodeo{
-    text-align: center;
+  
+  .footer-edit{
+    padding: 50px;
+  }
+  .footer-menu{
+    
   }
 
 }
@@ -84,6 +102,16 @@
   .emailKodeo{
     font-size: 2.5rem;
     font-weight: bold;
-    
+    text-align: start;
+    margin-bottom: 5rem;
+  }
+  .noSeasExtraño{
+    text-align: start;
+  }
+  .copyRightKodeo{
+    text-align: center;
   }
 }
+
+
+
