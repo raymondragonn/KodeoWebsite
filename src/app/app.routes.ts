@@ -29,56 +29,57 @@ import { ProjectV3Component } from './digital-agency/pages/project-v3/project-v3
 import { ProjectDetailsComponent } from './digital-agency/pages/project-details/project-details.component';
 import { KodeoWebsiteComponent } from './kodeo-website/kodeo-website.component';
 import { DefaultComponent as DefaultKodeoWebsiteComponent } from './kodeo-website/default/default.component';
+import { ContactusBannerKodeoWebsiteComponent } from './kodeo-website/default/sections/contactus-banner-kodeo-website/contactus-banner-kodeo-website.component';
 
 export const routes: Routes = [
-  {
-    path: 'index-1',
-    component: Index1Component,
-    children: [
-      { path: '', component: DefaultComponent },
-      { path: 'about-us-v1', component: AboutUsV1Component },
-      { path: 'team-v1', component: TeamV1Component },
-      { path: 'service-v1', component: ServiceV1Component },
-      { path: 'faq-v1', component: FaqV1Component },
-      { path: '404', component: PageNotFoundComponent },
-      { path: 'contact-v1', component: ContactComponent },
-      { path: 'project-v1', component: ProjectV1Component },
-    ]
-  },
-  {
-    path: 'auth',
-    component: AuthComponent,
-    children: [
-      { path: '', component: SignInComponent, },
-      { path: 'signin', component: SignInComponent, },
-      { path: 'signup', component: SignUpComponent, },
-    ]
-  },
-  {
-    path: 'website-builder',
-    component: WebsiteBuilderComponent,
-    children: [
-      { path: '', component: DefaultWebsiteBuilderComponent },
-      { path: 'signin', component: SignInComponent, },
-      { path: 'signup', component: SignUpComponent, },
-    ]
-  },
-  {
-    path: 'project-management',
-    component: ProjectManagementComponent,
-    children: [
-      { path: '', component: ProjectManagementDefaultComponent },
-      { path: 'project-v5', component: ProjectV5Component },
-      { path: 'pricing-v2', component: PricingV2Component },
-    ]
-  },
-  {
-    path: 'mobile-app-landing',
-    component: MobileAppLandingComponent,
-    children: [
-      { path: '', component: MobileAppLandingDefaultComponent },
-    ]
-  },
+  // {
+  //   path: 'index-1',
+  //   component: Index1Component,
+  //   children: [
+  //     { path: '', component: DefaultComponent },
+  //     { path: 'about-us-v1', component: AboutUsV1Component },
+  //     { path: 'team-v1', component: TeamV1Component },
+  //     { path: 'service-v1', component: ServiceV1Component },
+  //     { path: 'faq-v1', component: FaqV1Component },
+  //     { path: '404', component: PageNotFoundComponent },
+  //     { path: 'contact-v1', component: ContactComponent },
+  //     { path: 'project-v1', component: ProjectV1Component },
+  //   ]
+  // },
+  // {
+  //   path: 'auth',
+  //   component: AuthComponent,
+  //   children: [
+  //     { path: '', component: SignInComponent, },
+  //     { path: 'signin', component: SignInComponent, },
+  //     { path: 'signup', component: SignUpComponent, },
+  //   ]
+  // },
+  // {
+  //   path: 'website-builder',
+  //   component: WebsiteBuilderComponent,
+  //   children: [
+  //     { path: '', component: DefaultWebsiteBuilderComponent },
+  //     { path: 'signin', component: SignInComponent, },
+  //     { path: 'signup', component: SignUpComponent, },
+  //   ]
+  // },
+  // {
+  //   path: 'project-management',
+  //   component: ProjectManagementComponent,
+  //   children: [
+  //     { path: '', component: ProjectManagementDefaultComponent },
+  //     { path: 'project-v5', component: ProjectV5Component },
+  //     { path: 'pricing-v2', component: PricingV2Component },
+  //   ]
+  // },
+  // {
+  //   path: 'mobile-app-landing',
+  //   component: MobileAppLandingComponent,
+  //   children: [
+  //     { path: '', component: MobileAppLandingDefaultComponent },
+  //   ]
+  // },
   {
     path: 'digital-agency',
     component: DigitalAgencyComponent,

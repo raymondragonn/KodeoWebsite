@@ -78,6 +78,28 @@
   font-size: 32px;
 }
 
+.footer-social-links:hover .footer-social-link {
+  opacity: 0.3;
+  color: #b3b3b3;
+  transition: all 0.3s;
+}
+.footer-social-links .footer-social-link:hover {
+  opacity: 1 !important;
+  color: #fff !important;
+  text-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.footer-menu:hover span {
+  opacity: 0.3;
+  color: #b3b3b3;
+  transition: all 0.3s;
+}
+.footer-menu span:hover {
+  opacity: 1 !important;
+  color: #fff !important;
+  text-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
 @media (max-width: 940px) {
   .footer{
     flex-direction: column;
