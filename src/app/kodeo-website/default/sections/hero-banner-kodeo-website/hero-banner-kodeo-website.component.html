@@ -1,4 +1,4 @@
-<div class="hero-banner-three z-1 position-relative pt-200 lg-pt-150 pb-75">
+<div class="hero-banner-three z-1 position-relative pt-200 lg-pt-150 pb-75 lg-pb-20">
     <div class="container position-relative">
       <div class="row mb-100">
         <div class="col-xl-10 col-lg-10 m-auto text-center">
@@ -11,21 +11,12 @@
           >
             ¿Qué tipo de sitio web necesitas? Comencemos hoy mismo.
           </p>
-          <form class="m-auto position-relative">
-            <input
-              #buildInput
-              type="text"
-              placeholder="Ej: Tienda en línea, Portafolio creativo, Blog personal"
-              aria-label="Tipo de sitio web que deseas crear"
-            />
-            <button 
-              type="button" 
-              (click)="onBuildNowClick(buildInput.value)" 
-              class="tran3s"
-            >
-              ¡Hagámoslo realidad!
-            </button>
-          </form>
+          <div class="d-flex justify-content-center mt-4">
+            <a (click)="goToContact()" class="btn-eleven" style="cursor:pointer;">
+              <span class="btn-text">¡Contactar ahora!</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>

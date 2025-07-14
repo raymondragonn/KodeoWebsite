@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quote-banner-kodeo-website',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './quote-banner-kodeo-website.component.scss'
 })
 export class QuoteBannerKodeoWebsiteComponent {
+  constructor(private router: Router) {}
 
+  goToContact() {
+    this.router.navigate(['/contact']);
+  }
 }

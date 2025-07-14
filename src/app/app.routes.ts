@@ -99,6 +99,7 @@ export const routes: Routes = [
     component: KodeoWebsiteComponent,
     children: [
       { path: '', component: DefaultKodeoWebsiteComponent},
+      { path: 'contact', component: ContactusBannerKodeoWebsiteComponent }
     ]
   }
 ]; 

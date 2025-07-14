@@ -1,1 +1,121 @@
-<p>probando 1, 2, 3...</p>
+<div class="contact-section-three position-relative z-1 pt-100 lg-pt-80 pb-100 lg-pb-80"
+    style="background-color: black;">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-6 d-flex">
+                <img src="assets/images/assets/loop.gif">
+            </div>
+            <div class="col-lg-6 d-flex">
+                <div class="form-style-two w-100">
+                    <div class="multi-step-form">
+                        <!-- Paso 1: Nombre -->
+                        <div *ngIf="step === 1" class="step">
+                            <h2>¡Hola!</h2>
+                            <p>¿Cuál es tu nombre?</p>
+                            <input type="text" [(ngModel)]="formData.name" placeholder="Nombre completo"
+                                class="form-control">
+                            <div *ngIf="errors.name" class="text-danger" style="font-size:1rem;">{{errors.name}}</div>
+                            <button (click)="nextStep()" class="btn btn-primary mt-3">Siguiente</button>
+                        </div>
+
+                        <!-- Paso 2: Marca -->
+                        <div *ngIf="step === 2" class="step">
+                            <h2>Cuéntanos sobre tu marca</h2>
+                            <input type="text" [(ngModel)]="formData.brandName" placeholder="¿Cuál es su nombre?"
+                                class="form-control mb-2">
+                            <div *ngIf="errors.brandName" class="text-danger" style="font-size:1rem;">{{errors.brandName}}</div>
+                            <input type="text" [(ngModel)]="formData.industry" placeholder="¿A qué industria pertenece?"
+                                class="form-control mb-2">
+                            <div *ngIf="errors.industry" class="text-danger" style="font-size:1rem;">{{errors.industry}}</div>
+                            <input type="text" [(ngModel)]="formData.product" placeholder="¿Cuál es el producto y/o servicio?"
+                                class="form-control mb-2">
+                            <div *ngIf="errors.product" class="text-danger" style="font-size:1rem;">{{errors.product}}</div>
+                            <input type="text" [(ngModel)]="formData.location" placeholder="¿Dónde está basado tu proyecto?"
+                                class="form-control mb-2">
+                            <div *ngIf="errors.location" class="text-danger" style="font-size:1rem;">{{errors.location}}</div>
+                            <input type="text" [(ngModel)]="formData.goal" placeholder="¿Qué quieres lograr?"
+                                class="form-control mb-2">
+                            <div *ngIf="errors.goal" class="text-danger" style="font-size:1rem;">{{errors.goal}}</div>
+                            <button (click)="prevStep()" class="btn btn-secondary mt-3 me-2">Atrás</button>
+                            <button (click)="nextStep()" class="btn btn-primary mt-3">Siguiente</button>
+                        </div>
+
+                        <!-- Paso 3: Servicios -->
+                        <div *ngIf="step === 3" class="step">
+                            <h2>¿Qué servicio te interesa?</h2>
+                            <div class="services-list">
+                                <label *ngFor="let s of services" class="service-chip" [ngClass]="{'selected': formData.service === s}">
+                                    <input type="radio" name="service" [(ngModel)]="formData.service" [value]="s" />
+                                    <span>{{s}}</span>
+                                </label>
+                            </div>
+                            <div *ngIf="errors.service" class="text-danger" style="font-size:1rem;">{{errors.service}}</div>
+                            <button (click)="prevStep()" class="btn btn-secondary mt-3 me-2">Atrás</button>
+                            <button (click)="nextStep()" class="btn btn-primary mt-3">Siguiente</button>
+                        </div>
+
+                        <!-- Paso 4: Presupuesto -->
+                        <div *ngIf="step === 4" class="step">
+                            <h2>¿Cuál es tu presupuesto?</h2>
+                            <select [(ngModel)]="formData.budget" class="form-control">
+                                <option value="" disabled selected>Selecciona tu presupuesto</option>
+                                <option value="$5,000 - $7,000">$5,000 - $7,000 MXN</option>
+                                <option value="$7,000 - $15,000">$7,000 - $15,000 MXN</option>
+                                <option value="$15,000 - $25,000">$15,000 - $25,000 MXN</option>
+                                <option value="$25,000+">$25,000+ MXN</option>
+                            </select>
+                            <div *ngIf="errors.budget" class="text-danger" style="font-size:1rem;">{{errors.budget}}</div>
+                            <button (click)="prevStep()" class="btn btn-secondary mt-3 me-2">Atrás</button>
+                            <button (click)="nextStep()" class="btn btn-primary mt-3">Siguiente</button>
+                        </div>
+
+                        <!-- Paso 5: Comentarios adicionales -->
+                        <div *ngIf="step === 5" class="step">
+                            <h2>¿Algo más que debamos saber?</h2>
+                            <textarea [(ngModel)]="formData.comments" placeholder="Detalles adicionales"
+                                class="form-control"></textarea>
+                            <button (click)="prevStep()" class="btn btn-secondary mt-3 me-2">Atrás</button>
+                            <button (click)="nextStep()" class="btn btn-primary mt-3">Siguiente</button>
+                        </div>
+
+                        <!-- Paso 6: Medios de contacto -->
+                        <div *ngIf="step === 6" class="step">
+                            <h2>¿Cómo te contactamos?</h2>
+                            <input type="text" [(ngModel)]="formData.phone" placeholder="Teléfono"
+                                class="form-control mb-2">
+                            <div *ngIf="errors.phone" class="text-danger" style="font-size:1rem;">{{errors.phone}}</div>
+                            <input type="email" [(ngModel)]="formData.email" placeholder="Correo electrónico"
+                                class="form-control mb-2">
+                            <div *ngIf="errors.email" class="text-danger" style="font-size:1rem;">{{errors.email}}</div>
+                            <div *ngIf="errors.contact" class="text-danger" style="font-size:1rem;">{{errors.contact}}</div>
+                            <select [(ngModel)]="formData.language" class="form-control mb-2">
+                                <option value="" disabled selected>Selecciona un idioma</option>
+                                <option value="Español">Español</option>
+                                <option value="English">English</option>
+                            </select>
+                            <div *ngIf="errors.language" class="text-danger" style="font-size:1rem;">{{errors.language}}</div>
+                            <button (click)="prevStep()" class="btn btn-secondary mt-3 me-2">Atrás</button>
+                            <button (click)="nextStep()" class="btn btn-primary mt-3">Siguiente</button>
+                        </div>
+
+                        <!-- Paso 7: ¿Cómo nos conociste? -->
+                        <div *ngIf="step === 7" class="step">
+                            <h2>¿Cómo escuchaste sobre nosotros?</h2>
+                            <select [(ngModel)]="formData.referral" class="form-control">
+                                <option value="" disabled selected>Selecciona como nos encontraste</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Referral">Recomendación</option>
+                                <option value="Google">Google</option>
+                                <option value="Other">Otro</option>
+                            </select>
+                            <div *ngIf="errors.referral" class="text-danger" style="font-size:1rem;">{{errors.referral}}</div>
+                            <button (click)="prevStep()" class="btn btn-secondary mt-3 me-2">Atrás</button>
+                            <button (click)="submitForm()" class="btn btn-success mt-3">Enviar</button>
+                        </div>
+                    </div>
+                </div> <!-- /.form-style-two -->
+            </div>
+        </div>
+    </div>
+</div>

@@ -86,6 +86,10 @@ export class DigitalAgencyHeaderComponent {
     });
   }
 
+  goToContact() {
+    this.router.navigate(['/contact']);
+  }
+
   // toggleCollapse ahora solo debe llamarse desde la flecha en el HTML, no desde el texto del menú.
   toggleCollapse(menu: DigitalAgencyMenuItems): void {
     if (!menu.subMenus?.length) {

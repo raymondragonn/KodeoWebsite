@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ScrollServiceService } from '../../../../services/scroll-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hero-banner-kodeo-website',
@@ -10,10 +11,14 @@ import { ScrollServiceService } from '../../../../services/scroll-service.servic
 })
 export class HeroBannerKodeoWebsiteComponent {
   
-  constructor(private scrollService: ScrollServiceService ){}
+  constructor(private scrollService: ScrollServiceService, private router: Router ){}
 
   onBuildNowClick(text: string) {
     this.scrollService.scrollToElement('contactSection');
     this.scrollService.fillContactForm(text);
   }  
+
+  goToContact() {
+    this.router.navigate(['/contact']);
+  }
 }
