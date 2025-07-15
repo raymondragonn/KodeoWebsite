@@ -4,6 +4,7 @@ import { MENUITEMS } from '../../nav-items/menu-data';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { ScrollServiceService } from '../../../../../app/services/scroll-service.service';
+import { ActivatedRoute } from '@angular/router';
 
 interface DigitalAgencyMenuItems {
   label: string
@@ -48,7 +49,7 @@ export class DigitalAgencyHeaderComponent {
   ]
   
 
-  constructor(private router: Router, private renderer: Renderer2, public scrollService: ScrollServiceService, private el: ElementRef) { }
+  constructor(private router: Router, private renderer: Renderer2, public scrollService: ScrollServiceService, private el: ElementRef, private route: ActivatedRoute) { }
 
   ngOnInit() { }
   ngOnDestroy() {
@@ -88,6 +89,19 @@ export class DigitalAgencyHeaderComponent {
 
   goToContact() {
     this.router.navigate(['/contact']);
+  }
+
+  scrollToSection(sectionId: string) {
+    if (this.router.url === '/' || this.router.url.startsWith('/?')) {
+      // Ya estamos en home, solo hacer scroll
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      // No estamos en home, navegar y pasar el parámetro
+      this.router.navigate(['/'], { queryParams: { section: sectionId } });
+    }
   }
 
   // toggleCollapse ahora solo debe llamarse desde la flecha en el HTML, no desde el texto del menú.
