@@ -46,6 +46,7 @@ export class DigitalAgencyHeaderComponent {
     { label: 'Reseñas', scrollId: 'testimonialsSection', isCollapsed: true },
 
     { label: 'Preguntas Frecuentes', scrollId: 'faqSection', isCollapsed: true },
+    { label: 'About Us', link: 'aboutUs', scrollId: 'aboutSection', isCollapsed: true}
   ]
   
 
@@ -56,9 +57,11 @@ export class DigitalAgencyHeaderComponent {
     this.offcanvasService.dismiss()
   }
 
-  verificarSubMenu(submenu: any){
-    console.log(submenu.link)
-    this.isInSubmenu = true;
+  verificarSubMenu(menu: any){
+    console.log(menu);
+    if(menu == 'aboutSection'){
+      this.router.navigate(['/aboutUs']);
+    }
     
     // this.router.navigate([submenu.link]).then(() => {
     //   // Opcional: cerrar offcanvas si lo estás usando
