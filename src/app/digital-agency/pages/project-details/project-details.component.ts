@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PortafolioService, PortfolioItem } from '../../../services/portafolio.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LayoutType } from '../../../../shared/types/layout-type';
 import { GetFooterByTypeComponent } from '../../../../shared/componates/get-footer-by-type/get-footer-by-type.component';
 import { QuoteBannerKodeoWebsiteComponent } from "../../../kodeo-website/default/sections/quote-banner-kodeo-website/quote-banner-kodeo-website.component";
@@ -16,7 +16,8 @@ export class ProjectDetailsComponent {
   project: PortfolioItem | undefined;
   constructor(
     private route: ActivatedRoute,
-    private portfolioService: PortafolioService
+    private portfolioService: PortafolioService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -24,5 +25,11 @@ export class ProjectDetailsComponent {
     this.project = this.portfolioService.getById(id);
     console.log(this.project);
   }
+
+  goToContact() {
+    this.router.navigate(['/contact']);
+  }
+
+  
   allLayout=LayoutType;
 }

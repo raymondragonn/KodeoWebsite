@@ -30,6 +30,7 @@ import { ProjectDetailsComponent } from './digital-agency/pages/project-details/
 import { KodeoWebsiteComponent } from './kodeo-website/kodeo-website.component';
 import { DefaultComponent as DefaultKodeoWebsiteComponent } from './kodeo-website/default/default.component';
 import { ContactusBannerKodeoWebsiteComponent } from './kodeo-website/default/sections/contactus-banner-kodeo-website/contactus-banner-kodeo-website.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 export const routes: Routes = [
   // {
@@ -92,6 +93,7 @@ export const routes: Routes = [
       { path: 'project-details', component: ProjectDetailsComponent },
       { path: 'project-details/:id', component: ProjectDetailsComponent },
 
+
     ]
   },
   {
@@ -99,7 +101,8 @@ export const routes: Routes = [
     component: KodeoWebsiteComponent,
     children: [
       { path: '', component: DefaultKodeoWebsiteComponent},
-      { path: 'contact', component: ContactusBannerKodeoWebsiteComponent }
+      { path: 'contact', component: ContactusBannerKodeoWebsiteComponent },
+      { path: 'aboutUs', component: AboutUsComponent },
     ]
   }
 ]; 
