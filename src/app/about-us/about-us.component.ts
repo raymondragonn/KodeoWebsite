@@ -18,6 +18,6 @@ export class AboutUsComponent {
   carouselImages = [
     { src: 'assets/images/media/img_KodeoTeam.jpg', alt: 'Equipo Kodeo' },
     { src: 'assets/images/media/img_KodeoTeam2.jpg', alt: 'Otra imagen' },
-    { src: 'assets/images/media/img_KodeoTeam3.jpeg', alt: 'Otra imagen' }
+    { src: 'assets/images/media/img_KodeoTeam3.jpg', alt: 'Otra imagen' }
   ];
 }
