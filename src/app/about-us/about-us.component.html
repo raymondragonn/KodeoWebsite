@@ -1,0 +1,114 @@
+<!-- 
+		=============================================
+			Block Feature Thirty
+		============================================== 
+		-->
+<div class="block-feature-thirty bg-one border-30 z-1 pt-120 lg-pt-80 pb-130 lg-pb-80 mt-30 lg-mt-20 position-relative">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-7 col-lg-6 order-lg-last">
+                <div class="ps-xl-5">
+                    <div class="title-one">
+                        <h2>Acerca de <br>Nosotros.</h2>
+                    </div>
+                    <p class="fs-28 fw-500 text-white mt-55 lg-mt-30 mb-70 lg-mb-40 pe-xxl-5">“Somos dos emprendedores veracruzanos apasionados por la tecnología y el desarrollo web, comprometidos en ayudar a otros negocios y proyectos a potenciar su presencia digital. En Kodeo, creemos que cada idea merece un espacio en internet, por eso trabajamos contigo para crear soluciones a la medida que impulsen tu éxito.”</p>
+                    <div class="fs-24 text-white mb-40 lg-mb-30">- Kodeo Team</div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-6">
+                <ngb-carousel *ngIf="carouselImages.length > 0" [interval]="7000" [wrap]="true" [keyboard]="true" [pauseOnHover]="true">
+                    <ng-template ngbSlide *ngFor="let img of carouselImages">
+                    <img [src]="img.src" [alt]="img.alt" class="media-img md-mt-40 w-100">
+                    </ng-template>
+                </ngb-carousel>
+            </div>
+        </div>
+    </div>
+    <img src="assets/images/shape/shape_83.svg" alt="" class="shapes shape_01">
+</div>
+<!-- /.block-feature-thirty -->
+
+
+<div
+    class="block-feature-thirtyOne bg-one border-30 z-1 pt-120 lg-pt-80 pb-130 lg-pb-80 mb-30 lg-mb-20 position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="title-one">
+                    <h2>Mas acerca de nosotros.</h2>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="accordion accordion-style-five ms-xxl-5 md-mt-50" ngbAccordion #accordion="ngbAccordion" [closeOthers]="true">
+                    <div class="accordion-item" ngbAccordionItem="first" #first="ngbAccordionItem" [collapsed]="false">
+                        <h2 class="accordion-header" ngbAccordionHeader>
+                            <button class="accordion-button pt-0" type="button" ngbAccordionToggle>
+                                Quienes Somos?
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse" ngbAccordionCollapse>
+                            <div class="accordion-body" ngbAccordionBody>
+                                <p class="fs-22">En Kodeo, el equipo está formado por Raymundo Becerra Mondragón y Eduardo Ávila Torruco, dos apasionados de la tecnología y el emprendimiento originarios de Veracruz. Su unión nació de una amistad cimentada en intereses comunes y en el objetivo de transformar ideas en soluciones digitales que impulsen a negocios y emprendedores en todo México, aportando innovación y calidad sin importar la ubicación geográfica.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" ngbAccordionItem="sec" #sec="ngbAccordionItem" [collapsed]="true">
+                        <h2 class="accordion-header" ngbAccordionHeader>
+                            <button class="accordion-button" type="button" ngbAccordionToggle>
+                                Nuestra Vision
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse" ngbAccordionCollapse>
+                            <div class="accordion-body" ngbAccordionBody>
+                                <p class="fs-22">Ser el referente mexicano en desarrollo web, reconocidos por nuestra creatividad, profesionalismo y la capacidad de transformar ideas en herramientas digitales valiosas para clientes de cualquier región del país.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" ngbAccordionItem="three" #three="ngbAccordionItem" [collapsed]="true">
+                        <h2 class="accordion-header" ngbAccordionHeader>
+                            <button class="accordion-button" type="button" ngbAccordionToggle>
+                                Nuestra Misión
+                            </button>
+                        </h2>
+                        <div class="accordion-collapse" ngbAccordionCollapse>
+                            <div class="accordion-body" ngbAccordionBody>
+                                <p class="fs-22">
+Crear soluciones web innovadoras y personalizadas que impulsen el crecimiento digital de negocios y emprendedores en todo México, brindando calidad, compromiso y atención cercana.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-banner d-flex align-items-center justify-content-center mt-100 lg-mt-60">
+            <a class="video-btn tran3s rounded-circle d-flex align-items-center justify-content-center" data-fancybox=""
+                href="https://www.youtube.com/embed/aXFSJTjVjw0"><i class="fa-sharp fa-solid fa-play"></i></a>
+        </div>
+
+
+        <div class="counter-wrapper mt-70 lg-mt-40">
+            <div class="row justify-content-between">
+                <div class="col-xl-4 col-lg-4">
+                    <div class="counter-block-one text-center text-lg-start mt-20">
+                        <div class="main-count fw-500 text-white">$<span [countUp]="30"></span>Mil+</div>
+                        <span class="fs-22">Inversion en Proyectos</span>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4">
+                    <div class="counter-block-one text-center mt-20">
+                        <div class="main-count fw-500 text-white"><span [countUp]="4"></span>+</div>
+                        <span class="fs-22">Años de Experiencia</span>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 ms-auto">
+                    <div class="counter-block-one text-center text-lg-start mt-20">
+                        <div class="main-count fw-500 text-white"><span [countUp]="2"></span></div>
+                        <span class="fs-22">Estados con presencía en la Republica</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
