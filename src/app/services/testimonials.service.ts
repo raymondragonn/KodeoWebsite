@@ -21,17 +21,17 @@ export class TestimonialsService {
       icon: 'assets/images/icon/icon_56.svg'
     },
     {
-      logo: 'assets/images/assets/AIXA.png',
-      quote: 'Los chicos cumplieron con todo lo que les pedi, me ayudaron a crear una pagina web que se ve muy bien y funciona perfecto.',
-      name: 'Jessica Barradas',
-      role: 'CEO',
-      icon: 'assets/images/assets/AIXA.png'
+      logo: 'assets/images/assets/aixa.svg',
+      quote: 'Recibí un excelente servicio. Atendieron todas mis peticiones y me ayudaron a desarrollar una página web visualmente atractiva y completamente funcional.',
+      name: 'Yessica Barradas',
+      role: 'Cosmetóloga',
+      icon: 'assets/images/icon/icon_56.svg'
     },
     {
-      logo: 'assets/images/logo/p_logo_66.png',
-      quote: 'Best decision ever, smooth hosting experience!',
-      name: 'Rashed Ka',
-      role: 'Engineer',
+      logo: 'assets/images/assets/learnify.svg',
+      quote: 'La plataforma de cursos en línea cumple con los requerimientos iniciales mencionados. Estoy satisfecho con el trabajo realizado, la plataforma funciona sin problemas.',
+      name: 'Luis Wong',
+      role: 'Emprendedor',
       icon: 'assets/images/icon/icon_56.svg'
     },
   ];

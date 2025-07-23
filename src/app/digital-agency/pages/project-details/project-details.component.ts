@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { PortafolioService, PortfolioItem } from '../../../services/portafolio.service';
 import { ActivatedRoute } from '@angular/router';
 import { LayoutType } from '../../../../shared/types/layout-type';
@@ -8,7 +9,7 @@ import { QuoteBannerKodeoWebsiteComponent } from "../../../kodeo-website/default
 @Component({
   selector: 'app-project-details',
   standalone: true,
-  imports: [GetFooterByTypeComponent, QuoteBannerKodeoWebsiteComponent],
+  imports: [GetFooterByTypeComponent, CommonModule],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss'
 })

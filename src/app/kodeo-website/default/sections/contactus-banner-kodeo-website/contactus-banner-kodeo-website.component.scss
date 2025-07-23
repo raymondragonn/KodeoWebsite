@@ -247,10 +247,13 @@ body {
 }
 
 @media (max-width: 600px) {
+  .section-gif {
+    padding-top: 40px;
+  }
   .contact-section-three {
     padding-top: 30px !important;
     padding-bottom: 20px !important;
-  }
+  }z
   .multi-step-form {
     padding: 16px 4px;
     border-radius: 12px;

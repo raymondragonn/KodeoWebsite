@@ -233,6 +233,20 @@
       transform: translateY(0);
     }
   }
+
+  .challenge-points {
+    list-style: disc; // Volvemos a usar las viñetas normales
+    padding-left: 1.5rem;
+    margin-top: 1.5rem;
+  
+    li {
+      font-size: 1.25rem; // Aumentamos el tamaño de letra (~20px)
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: #b7b4b5; // Ajusta según tu fondo, opcional
+    }
+  }
+  
   
   /* Responsive styles */
   @media (max-width: 992px) {

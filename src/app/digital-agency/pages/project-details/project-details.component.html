@@ -3,7 +3,7 @@
         <div class="position-relative">
             <div class="row align-items-end">
                 <div class="col-md-12">
-                    <div class="title-three">
+                    <div class="title-three text-center">
                         <h2>{{project?.title}}</h2>
                     </div>
                 </div>
@@ -25,30 +25,30 @@
                     </li>
                     <li>
                         <h6>Dominio</h6>
-                        <a [href]="project?.sitio" target="_blank" style="word-break: break-all; color: #fff; text-decoration: underline;">
+                        <a [href]="project?.sitio" target="_blank"
+                            style="word-break: break-all; color: #fff; text-decoration: underline;">
                             {{project?.sitio}}
                         </a>
                     </li>
                 </ul>
             </div>
 
-            <div class="media-lg">
-                <img [src]="project?.imageDetail1" alt="" class="w-100">
-            </div>
-
-            <h3>Vista del proyecto</h3>
-            <p>{{project?.descriptionAmplia}}</p>
-            
-            <h3>Proceso y desafíos</h3>
-            <p>{{project?.challenge}}</p>
-
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="media-md mb-25"><img [src]="project?.imageDetail2" alt="" class="w-100"></div>
-                </div>
+            <div class="row justify-content-between">
                 <div class="col-md-4">
+                    <div class="media-md mb-25"><img [src]="project?.imageDetail2" alt="" class="w-100"></div>
                     <div class="media-md mb-25"><img [src]="project?.imageDetail3" alt="" class="w-100"></div>
                     <div class="media-md mb-25"><img [src]="project?.imageDetail4" alt="" class="w-100"></div>
+                </div>
+                <div class="col-md-7">
+                    <h3>Descripción</h3>
+                    <p>{{project?.descriptionAmplia}}</p>
+                    <h3>Desafíos</h3>
+                    <ul class="challenge-points">
+                        <li *ngFor="let item of (project?.challenge || '').split('\n')">
+                            {{ item }}
+                          </li>
+                    </ul>
+
                 </div>
             </div>
             <!-- <h3>Summery</h3>
@@ -91,11 +91,11 @@
             <div class="logo-section">
                 <img src="assets/images/logo/logo_black_transparent.svg" alt="" class="logo-grande">
             </div>
-            
+
             <div class="text-section">
                 <h2 class="title-modify wow fadeInUp">¿Tienes un proyecto en mente?</h2>
                 <p class="subtitle wow fadeInUp" data-wow-delay="0.2s">Amamos escuchar tus ideas.</p>
-                
+
                 <div class="trust-indicators wow fadeInUp" data-wow-delay="0.4s">
                     <div class="trust-item">
                         <i class="fas fa-check-circle"></i>
@@ -110,7 +110,7 @@
                         <span>Respuesta en 24hrs</span>
                     </div>
                 </div>
-                
+
                 <div class="cta-section wow fadeInUp" data-wow-delay="0.6s">
                     <a routerLink="/project-management/pricing-v2" class="btn-eleven">
                         <span class="btn-text">Contactar ahora</span>
@@ -120,7 +120,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="background-shapes">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
