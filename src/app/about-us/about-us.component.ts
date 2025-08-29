@@ -20,4 +20,5 @@ export class AboutUsComponent {
     { src: 'assets/images/media/img_KodeoTeam2.jpg', alt: 'Otra imagen' },
     { src: 'assets/images/media/img_KodeoTeam3.jpg', alt: 'Otra imagen' }
   ];
+
 }

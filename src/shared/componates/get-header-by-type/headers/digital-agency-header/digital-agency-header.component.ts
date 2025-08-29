@@ -57,6 +57,10 @@ export class DigitalAgencyHeaderComponent {
     this.offcanvasService.dismiss()
   }
 
+  scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   verificarSubMenu(menu: any){
     console.log(menu);
     if(menu == 'aboutSection'){
