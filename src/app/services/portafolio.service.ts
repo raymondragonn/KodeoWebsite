@@ -66,9 +66,7 @@ Funciona en el celular: La web se ve y funciona perfecto en cualquier teléfono.
     challenge: `Seguridad de Acceso: Asegurar que solo usuarios autorizados pudieran acceder al sistema administrativo era fundamental.
 Flujo de Compra Optimizado: Diseñar una experiencia de usuario que conectara de manera fluida y efectiva con WhatsApp fue clave para maximizar las conversiones.
 Actualización Dinámica del Catálogo: El desafío fue crear una interfaz amigable que permitiera al equipo de InCup modificar productos sin necesidad de conocimientos técnicos.
-Representación de Procesos: Traducir los complejos procesos internos de InCup en una narrativa clara, visual y comprensible para el usuario final requirió un enfoque estratégico.
-
-`,
+Representación de Procesos: Traducir los complejos procesos internos de InCup en una narrativa clara, visual y comprensible para el usuario final requirió un enfoque estratégico.`,
     link: '/digital-agency/project-details/2',
     tags: ['eCommerce', 'Gestión de Inventario', 'Catálogo Digital'],
     imageUrl: 'assets/images/media/img_17.png',

@@ -46,7 +46,7 @@ export class DigitalAgencyHeaderComponent {
     { label: 'Reseñas', scrollId: 'testimonialsSection', isCollapsed: true },
 
     { label: 'Preguntas Frecuentes', scrollId: 'faqSection', isCollapsed: true },
-    { label: 'About Us', link: 'aboutUs', scrollId: 'aboutSection', isCollapsed: true}
+    { label: 'Sobre Nosotros', link: 'aboutUs', scrollId: 'aboutSection', isCollapsed: true}
   ]
   
 
